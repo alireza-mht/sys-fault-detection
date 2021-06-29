@@ -23,8 +23,8 @@ The parameters in the project:
 
 ### How to work with it?
 ***
-By running of this project, you can see the figure of each sql_id with its system fault. So the requests should contain
-two parameters:
+By running this project, you can see the figure of each sql_id with its system fault. So the requests should contain
+two parameters: Number of days and selected id.
 
 Example of requesting the figures:
 
