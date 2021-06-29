@@ -24,7 +24,7 @@ The parameters in the project:
 ### How to work with it?
 ***
 After running the app.py in the project, you should open the sys-fault.html. The requests should contain
-two parameters: Number of days and selected id. After submitting the request, you can see the figure of each sql_id with its system fault.
+two parameters: Number of days and selected id. After submitting the request, you can see the figure of each sql_id with its system fault. We detect the faults by comparing the requests in the first time interval and second time interval. The data in the figures shows the requests in the faults detected time intervals.
 
 Example of requesting the figures:
 
