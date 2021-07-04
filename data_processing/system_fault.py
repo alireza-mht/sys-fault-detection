@@ -16,8 +16,14 @@ def roundTime(dt=None, roundTo=60):
     return dt - datetime.timedelta(0, rounding - seconds, -dt.microsecond)
 
 
-# return: grouped data by the defined min, average latency in each time interval
+#
 def group_average_by_minutes(samples, minutes, start_time, end_time):
+    """ group the moving average of one specific sql_id based on the defined start time and end time
+
+        return:
+            grouped data by the defined min, average latency in each time interval
+    """
+
     sample_x = samples[0]
     sample_y = samples[1]
 
@@ -40,15 +46,25 @@ def group_average_by_minutes(samples, minutes, start_time, end_time):
     df = pd.DataFrame(sample_x_pd, columns=['Date'])
     df['latency'] = sample_y
 
-    # defin the freq_rate for grouping the data (in sec)
+    # define the freq_rate for grouping the data (in sec)
     freq_rate = str(minutes * 60) + 'S'
     grouped_data = df.groupby(pd.Grouper(key='Date', freq=freq_rate)).mean().fillna(0)
 
     return [grouped_data.index.values, grouped_data['latency'].values]
 
 
-# return : list of start time and end time of system faults
+#
 def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_intervals):
+    """ Find the faults intervals in the system
+
+        Parameters:
+            acceptance_rate: a rate for detecting the faults
+            min_valid_pair_intervals: minimum number of required valid interval to detect the faults in the system
+
+        return :
+            list of start time and end time of system faults
+    """
+
     # get the first value to check the size of sql_ids
     values = grouped_by_minutes.values()
     value_iterator = iter(values)
@@ -85,11 +101,13 @@ def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_interval
 
 
 def group_by_minutes(sql_store_dict, time_interval):
+    """ group all the sql_ids based on the minimum start time and maximum end time of all sql_ids
+
+    """
     grouped_by_minutes = {}
 
-    # find the minimum time and maximum time of all sql_ids
-    # in all sql_id data starts from start time and ends by the end time
-    # all sql id will have the same size based on the time interval
+    # find the minimum time and maximum time of all sql_ids in all sql_id data starts from start time and ends by the
+    # end time all sql id will have the same size based on the time interval
     start_time = min([v[0][0] for v in sql_store_dict.values()])
     end_time = max([v[0][-1] for v in sql_store_dict.values()])
 
@@ -133,7 +151,7 @@ def plot_sys_fault(sample, sql_id, sys_fault=None):
                     second_fault_interval_x.append(sample_x[i])
                     second_fault_interval_y.append(sample_y[i])
 
-    # creat figures
+    # create figures
     fig = go.Figure()
     fig.add_trace(
         go.Scatter(x=first_fault_interval_x, y=first_fault_interval_y, mode='markers', marker=dict(
@@ -150,4 +168,6 @@ def plot_sys_fault(sample, sql_id, sys_fault=None):
                       xaxis_title="Date and time",
                       yaxis_title="Response time"
                       )
+
+    fig.update_layout(showlegend=True)
     return fig

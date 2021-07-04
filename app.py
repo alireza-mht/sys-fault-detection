@@ -1,8 +1,7 @@
 from flask import Flask, render_template
-from flask import request, jsonify
+from flask import request
 import json
 import plotly
-import os
 from flask_cors import CORS
 
 from data_processing import preprocessing, system_fault
@@ -25,23 +24,31 @@ def plot_sys_fault():
     sql_id = request.args.get('sql_id', None)
     days_num = request.args.get('days_num', None)
 
-    fig = creat_fig(int(sql_id), int(days_num))
-    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-
-    return graphJSON
-    # return render_template('sys-fault.html', graphJSON=graphJSON)
-
-
-def creat_fig(sql_id, days_num):
-    # dirname = os.path.dirname(__file__)
-    # path_file = os.path.join(dirname, '../resources/access.log')
     path = "C://Users//DM3522//Desktop//access.log"
-
-    # get the data dictionary
     sql_stores_dict = preprocessing.get_preprocessed_data(days=days_num, path_file=path)
-    assert len(sql_stores_dict[sql_id][0]) != 0, 'Data is not available'
+    if len(sql_stores_dict) == 0 or sql_id not in sql_stores_dict.keys():
+        return 'Data is not available in the specified days. Please increase the days number', 400
 
+    # fig = creat_fig(int(sql_id), int(days_num))
+    fig = creat_fig(sql_stores_dict, int(sql_id))
+    graph_json = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+
+    return graph_json
+
+
+@app.route('/')
+def home():
+    return render_template('sys-fault.html')
+
+
+def creat_fig(sql_stores_dict, sql_id):
+    # get the data dictionary
+    # sql_stores_dict = preprocessing.get_preprocessed_data(days=days_num, path_file=path)
+
+    # group the data based on the defined time interval
     grouped_data = system_fault.group_by_minutes(sql_stores_dict, time_interval=10)
+
+    # detect the fault time intervals in the system
     sys_fault = system_fault.calculate_fault(grouped_data, acceptance_rate=0.9, min_valid_pair_intervals=10)
 
     # show the graph on moving average
@@ -51,4 +58,11 @@ def creat_fig(sql_id, days_num):
 
 # @app.errorhandler(Exception)
 # def handle_exception(e):
-#     return 'bad request!', 400
+#     if e.args[0] == 'Data is not available':
+#         return 'Data is not available in the specified days. Please increase the days number', 400
+#     else:
+#         return 'internal server error', 500
+
+# 102588
+# 102586
+# 102587

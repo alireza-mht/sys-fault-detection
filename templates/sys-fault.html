@@ -68,38 +68,52 @@
         let e = document.getElementById("myid")
         let sql_id = e.value
 
+        //remove the error message
         if (document.getElementById("error") != null)
             document.getElementById("error").remove()
 
+
+        //remove previous plot
         document.getElementById("chart").remove()
         let child = document.createElement("div");
         child.id = "chart";
         document.getElementById("data").append(child)
 
-        let theUrl = "http://127.0.0.1:5000/plot?sql_id=" + sql_id + "&days_num=" + days
-        let xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function () {
+        if (days === "" || days==="0" ) {
 
-            if (xmlHttp.status === 200 && xmlHttp.readyState === 4) {
-                document.getElementById("loader-graph").style.display = "none"
-                let graph = JSON.parse(xmlHttp.responseText);
-                Plotly.plot('chart', graph, {});
+            showError("please enter valid days number")
+        } else {
+            let theUrl = "http://127.0.0.1:5000/plot?sql_id=" + sql_id + "&days_num=" + days
+            let xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
 
-            } else if (xmlHttp.status === 400 && xmlHttp.readyState === 4) {
-                document.getElementById("loader-graph").style.display = "none"
-                let child = document.createElement("div");
-                child.id = "error";
-                child.innerHTML = "<p>Not enough data available in the specified days. Please increase the value</p>"
-                document.getElementById("graph").append(child)
-            }
-        };
-        xmlHttp.open("GET", theUrl);
-        xmlHttp.send();
+                if (xmlHttp.status === 200 && xmlHttp.readyState === 4) {
 
+                    document.getElementById("loader-graph").style.display = "none"
+                    let graph = JSON.parse(xmlHttp.responseText);
+                    Plotly.plot('chart', graph, {});
+
+                } else if (xmlHttp.status === 400 && xmlHttp.readyState === 4) {
+                    showError(xmlHttp.responseText)
+                }
+            };
+            xmlHttp.open("GET", theUrl);
+            xmlHttp.send();
+        }
         return false;
     }
 
+    function showError(s) {
+        document.getElementById("loader-graph").style.display = "none"
+        let child = document.createElement("div");
+        child.id = "error";
+        child.innerHTML = "<p>" + s + "</p>"
+        document.getElementById("graph").append(child)
+    }
 
+    //cash file find all the ids
+    // every day update the cash
+    // we will need
 </script>
 <script>
 
