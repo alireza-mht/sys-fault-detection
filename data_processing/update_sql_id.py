@@ -26,9 +26,13 @@ def save_sql_id_list(path_file):
 
 
 path = "C:/Users/DM3522/Desktop/access.log"
-secs = 20
-# schedule.every().sunday.at('1:00').do(save_sql_id_list, path)
-schedule.every().minute.at(":10").do(save_sql_id_list, path)
+days_interval = 20
+time_to_run = "03:00"
+schedule.every(days_interval).days.at(time_to_run).do(save_sql_id_list, path)
+
+#example
+#schedule.every(3).minutes.at(":10").do(save_sql_id_list, path)
+
 while 1:
     schedule.run_pending()
     time.sleep(1)
