@@ -3,8 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../static/load.css">
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
 </head>
-
 <body onload="loadingData()">
 
 
@@ -80,7 +80,6 @@
         document.getElementById("data").append(child)
 
         if (days === "" || days==="0" ) {
-
             showError("please enter valid days number")
         } else {
             let theUrl = "http://127.0.0.1:5000/plot?sql_id=" + sql_id + "&days_num=" + days
