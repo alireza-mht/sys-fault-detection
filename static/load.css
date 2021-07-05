@@ -11,12 +11,6 @@
     z-index: 99;
 }
 
-#loading-image {
-    position: absolute;
-    top: 100px;
-    left: 240px;
-    z-index: 100;
-}
 
 
 #loader {
@@ -35,7 +29,7 @@
 }
 
 #loader-graph {
-     position: relative;
+    position: relative;
     left: 50%;
     top: 250px;
     z-index: 1;
@@ -76,27 +70,6 @@
     animation-duration: 1s
 }
 
-@-webkit-keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0
-    }
-    to {
-        bottom: 0px;
-        opacity: 1
-    }
-}
-
-@keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0
-    }
-    to {
-        bottom: 0;
-        opacity: 1
-    }
-}
 
 #myDiv {
     display: none;
