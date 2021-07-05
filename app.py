@@ -31,11 +31,10 @@ def plot_sys_fault():
 
     # get the data dictionary
     path = "C://Users//DM3522//Desktop//access.log"
-    sql_stores_dict = preprocessing.get_preprocessed_data(days=days_num, path_file=path)
-    if len(sql_stores_dict) == 0 or sql_id not in sql_stores_dict.keys():
+    sql_stores_dict = preprocessing.get_preprocessed_data(days=int(days_num), path_file=path)
+    if len(sql_stores_dict) == 0 or int(sql_id) not in sql_stores_dict.keys():
         return 'Data is not available in the specified days. Please increase the days number', 400
 
-    # fig = creat_fig(int(sql_id), int(days_num))
     fig = creat_fig(sql_stores_dict, int(sql_id))
     graph_json = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
