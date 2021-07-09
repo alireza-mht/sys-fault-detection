@@ -88,4 +88,45 @@ def get_preprocessed_data(days, path_file=None):
     return sql_store_dict
 
 
+def limit_sql_id(sql_ids, time):
+    time = datetime.datetime.strptime(time, '%Y/%m/%d-%H:%M:%S')
+    empty_sql_id = []
+    for sql_id in sql_ids:
+        date = sql_ids[sql_id][0]
+        response_time = sql_ids[sql_id][1]
+        data_final = []
+        response_time_final = []
+        for i in range(len(date) - 1, -1, -1):
+            if date[i] > time:
+                data_final.insert(0, date[i])
+                response_time_final.insert(0, response_time[i])
 
+            else:
+                break
+
+        if len(data_final) != 0:
+            sql_ids[sql_id][0] = np.array(data_final)
+            sql_ids[sql_id][1] = np.array(response_time_final)
+        else:
+            empty_sql_id.append(sql_id)
+
+    [sql_ids.pop(v) for v in empty_sql_id]
+    return sql_ids
+
+
+def get_first_start_time(path_file):
+    file = open(path_file)
+    lines = file.read().splitlines()
+
+    for line in lines:
+        data_line = line.split()
+        line_date = data_line[3].replace('[', '').replace(':', ' ', 1)
+        line_date = datetime.datetime.strptime(line_date, '%d/%b/%Y %H:%M:%S')
+
+        # some data do not have sql_id
+        if "sqlstore_id" in line:
+            sql_id = data_line[6].split("sqlstore_id=")[1].split("&")[0]
+
+            # some data do not have response time and some of them have error
+            if len(data_line) == 10 and data_line[9].isdigit() and sql_id != 'null':
+                return line_date

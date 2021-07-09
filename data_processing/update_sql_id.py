@@ -1,12 +1,8 @@
 import time
-from threading import Timer
 import schedule
-import datetime
 
 
 def save_sql_id_list(path_file):
-    print("start")
-    print(datetime.datetime.now())
     file = open(path_file)
     lines = file.read().splitlines()
     data = []
@@ -21,8 +17,6 @@ def save_sql_id_list(path_file):
                 if sql_id != "null" and int(sql_id) not in data:
                     data.append(int(sql_id))
                     file_save.write(sql_id + "\n")
-    print("finish")
-    print(datetime.datetime.now())
 
 
 path = "C:/Users/DM3522/Desktop/access.log"

@@ -10,13 +10,12 @@ def roundTime(dt=None, roundTo=60):
     roundTo : Closest number of seconds to round to, default 1 minute.
     Author: Thierry Husson 2012 - Use it as you want but don't blame me.
     """
-    if dt == None: dt = datetime.datetime.now()
+    if dt is None: dt = datetime.datetime.now()
     seconds = (dt.replace(tzinfo=None) - dt.min).seconds
     rounding = (seconds + roundTo / 2) // roundTo * roundTo
     return dt - datetime.timedelta(0, rounding - seconds, -dt.microsecond)
 
 
-#
 def group_average_by_minutes(samples, minutes, start_time, end_time):
     """ group the moving average of one specific sql_id based on the defined start time and end time
 
@@ -50,10 +49,9 @@ def group_average_by_minutes(samples, minutes, start_time, end_time):
     freq_rate = str(minutes * 60) + 'S'
     grouped_data = df.groupby(pd.Grouper(key='Date', freq=freq_rate)).mean().fillna(0)
 
-    return [grouped_data.index.values, grouped_data['latency'].values]
+    return [grouped_data.index.values.astype('M8[s]').astype('O'), grouped_data['latency'].values]
 
 
-#
 def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_intervals):
     """ Find the faults intervals in the system
 
@@ -71,7 +69,6 @@ def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_interval
     first_value = next(value_iterator)
 
     interval_size = len(first_value[0])
-
     fault_pair_time_intervals = []
 
     for i in range(interval_size - 1):
@@ -102,7 +99,6 @@ def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_interval
 
 def group_by_minutes(sql_store_dict, time_interval):
     """ group all the sql_ids based on the minimum start time and maximum end time of all sql_ids
-
     """
     grouped_by_minutes = {}
 
@@ -122,12 +118,11 @@ def group_by_minutes(sql_store_dict, time_interval):
     # group all the data in all sql_ids based on the time_interval
     for dic in sql_store_dict:
         grouped_by_minutes[dic] = group_average_by_minutes(sql_store_dict[dic], time_interval, start_time_round,
-                                                           end_time_round
-                                                           )
+                                                           end_time_round)
     return grouped_by_minutes
 
 
-def plot_sys_fault(sample, sql_id, sys_fault=None):
+def plot_sys_fault(sample, sql_id, sys_fault, time_interval):
     sample_x = sample[0]
     sample_y = sample[1]
 
@@ -140,14 +135,14 @@ def plot_sys_fault(sample, sql_id, sys_fault=None):
     for i in range(len(sample_x)):
         for j in range(len(sys_fault)):
 
-            # mark the sys fault data in the first interval
-            if sys_fault[j][0] < np.datetime64(sample_x[i]) < sys_fault[j][1]:
+            first_interval = sys_fault[j][0]
+            second_interval = sys_fault[j][1]
+            if first_interval < sample_x[i] < second_interval:
                 first_fault_interval_x.append(sample_x[i])
                 first_fault_interval_y.append(sample_y[i])
 
-            # mark the sys fault data in the second interval
-            elif (sys_fault[j][0] + np.timedelta64(10, 'm')) < np.datetime64(sample_x[i]):
-                if np.datetime64(sample_x[i]) < (sys_fault[j][1] + np.timedelta64(10, 'm')):
+            elif (first_interval + datetime.timedelta(minutes=time_interval)) < sample_x[i]:
+                if sample_x[i] < (second_interval + datetime.timedelta(minutes=time_interval)):
                     second_fault_interval_x.append(sample_x[i])
                     second_fault_interval_y.append(sample_y[i])
 
