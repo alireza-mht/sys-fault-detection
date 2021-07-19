@@ -1,0 +1,782 @@
+2021-07-14 16:46:08,084 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:46:08] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 16:46:08,184 - root - INFO - sql id is get
+2021-07-14 16:46:08,184 - root - INFO - ssss
+2021-07-14 16:46:08,185 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:46:08] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 16:46:11,856 - root - INFO - start preprocessing data
+2021-07-14 16:46:18,050 - root - INFO - hi
+2021-07-14 16:46:18,050 - root - WARNING - Request not completed due to unavailability of data
+2021-07-14 16:46:18,051 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:46:18] "[31m[1mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 400 -
+2021-07-14 16:47:49,210 - root - INFO - start preprocessing data
+2021-07-14 16:47:55,570 - root - INFO - hi
+2021-07-14 16:47:55,571 - root - WARNING - Request not completed due to unavailability of data
+2021-07-14 16:47:55,572 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:47:55] "[31m[1mGET /plot?sql_id=100343&days_num=50 HTTP/1.1[0m" 400 -
+2021-07-14 16:48:26,169 - root - INFO - start preprocessing data
+2021-07-14 16:48:31,796 - root - INFO - hi
+2021-07-14 16:48:31,893 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:48:31] "[37mGET /plot?sql_id=100343&days_num=100 HTTP/1.1[0m" 200 -
+2021-07-14 16:53:07,390 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:53:09,350 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:53:09] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 16:53:09,450 - root - INFO - sql id is get
+2021-07-14 16:53:09,450 - root - INFO - ssss
+2021-07-14 16:53:09,451 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:53:09] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 16:53:13,426 - root - INFO - start preprocessing data
+2021-07-14 16:53:19,798 - root - INFO - hi
+2021-07-14 16:53:19,798 - root - WARNING - Request not completed due to unavailability of data
+2021-07-14 16:53:19,799 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:53:19] "[31m[1mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 400 -
+2021-07-14 16:53:32,710 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:53:36,059 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:53:36] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 16:53:36,204 - root - INFO - sql id is get
+2021-07-14 16:53:36,204 - root - INFO - ssss
+2021-07-14 16:53:36,205 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:53:36] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 16:53:40,712 - root - INFO - start preprocessing data
+2021-07-14 16:53:46,603 - root - INFO - hi
+2021-07-14 16:53:46,604 - root - WARNING - Request not completed due to unavailability of data
+2021-07-14 16:53:46,605 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:53:46] "[31m[1mGET /plot?sql_id=100343&days_num=4 HTTP/1.1[0m" 400 -
+2021-07-14 16:55:11,179 - app - INFO - Service detectionFautes Demarre
+2021-07-14 16:55:11,179 - app - INFO - Service detectionFautes Demarre
+2021-07-14 16:55:11,179 - app - INFO - Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+2021-07-14 16:55:11,179 - app - INFO - Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+2021-07-14 16:55:11,179 - app - INFO - Service detectionFautes Repertoire des journaux: logs
+2021-07-14 16:55:11,179 - app - INFO - Service detectionFautes Repertoire des journaux: logs
+2021-07-14 16:55:11,199 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:55:11,199 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:55:13,433 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:55:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 16:55:13,433 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:55:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 16:55:13,579 - root - INFO - sql id is get
+2021-07-14 16:55:13,579 - root - INFO - ssss
+2021-07-14 16:55:13,580 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:55:13] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 16:55:13,580 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:55:13] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 16:55:18,690 - root - INFO - start preprocessing data
+2021-07-14 16:55:24,308 - root - INFO - hi
+2021-07-14 16:55:24,308 - root - WARNING - Request not completed due to unavailability of data
+2021-07-14 16:55:24,308 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:55:24] "[31m[1mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 400 -
+2021-07-14 16:55:24,308 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 16:55:24] "[31m[1mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 400 -
+2021-07-14 17:00:04,941 - app - INFO - Service detectionFautes Demarre
+2021-07-14 17:00:04,941 - app - INFO - Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+2021-07-14 17:00:04,941 - app - INFO - Service detectionFautes Repertoire des journaux: logs
+2021-07-14 17:00:04,964 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 17:00:11,262 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 17:00:11] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 17:00:11,531 - app - INFO - sql id is get
+2021-07-14 17:00:11,532 - app - INFO - ssss
+2021-07-14 17:00:11,534 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 17:00:11] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 17:00:11,780 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 17:00:11] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+2021-07-14 17:00:22,213 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 17:00:22] "[31m[1mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 400 -
+2021-07-14 22:55:57,313 - app - INFO - Service detectionFautes Demarre
+2021-07-14 22:55:57,313 - app - INFO - Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+2021-07-14 22:55:57,313 - app - INFO - Service detectionFautes Repertoire des journaux: logs
+2021-07-14 22:55:59,767 - app - INFO - sql id is get
+2021-07-14 22:55:59,767 - app - INFO - ssss
+2021-07-14 22:57:13,933 - app - INFO - Service detectionFautes Demarre
+2021-07-14 22:57:13,933 - app - INFO - Service detectionFautes Demarre
+2021-07-14 22:57:13,933 - app - INFO - Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+2021-07-14 22:57:13,933 - app - INFO - Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+2021-07-14 22:57:13,933 - app - INFO - Service detectionFautes Repertoire des journaux: logs
+2021-07-14 22:57:13,933 - app - INFO - Service detectionFautes Repertoire des journaux: logs
+2021-07-14 22:57:13,948 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 22:57:17,572 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 22:57:17] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 22:57:17,762 - root - INFO - sql id is get
+2021-07-14 22:57:17,762 - root - INFO - ssss
+2021-07-14 22:57:17,763 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 22:57:17] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 22:57:20,681 - root - INFO - start preprocessing data
+2021-07-14 22:57:26,714 - root - INFO - hi
+2021-07-14 22:57:26,715 - root - WARNING - Request not completed due to unavailability of data
+2021-07-14 22:57:26,715 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 22:57:26] "[31m[1mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 400 -
+2021-07-14 22:58:05,978 - app - INFO - Service detectionFautes Demarre
+2021-07-14 22:58:05,978 - app - INFO - Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+2021-07-14 22:58:05,978 - app - INFO - Service detectionFautes Repertoire des journaux: logs
+2021-07-14 22:58:06,003 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 22:58:10,576 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 22:58:10] "[37mGET / HTTP/1.1[0m" 200 -
+2021-07-14 22:58:10,676 - root - INFO - sql id is get
+2021-07-14 22:58:10,677 - root - INFO - ssss
+2021-07-14 22:58:10,677 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 22:58:10] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+2021-07-14 22:58:16,043 - root - INFO - start preprocessing data
+2021-07-14 22:58:21,926 - root - INFO - hi
+2021-07-14 22:58:21,926 - root - WARNING - Request not completed due to unavailability of data
+2021-07-14 22:58:21,927 - werkzeug - INFO - 127.0.0.1 - - [14/Jul/2021 22:58:21] "[31m[1mGET /plot?sql_id=100343&days_num=7 HTTP/1.1[0m" 400 -
+[ 2021-07-15 09:20:45,638 ] app in INFO : Service detectionFautes Demarre
+[ 2021-07-15 09:20:45,638 ] app in INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 09:20:45,638 ] app in INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 09:20:45,654 ] werkzeug in INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 09:20:53,520 ] werkzeug in INFO : 127.0.0.1 - - [15/Jul/2021 09:20:53] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 09:20:53,795 ] root in INFO : sql id is get
+[ 2021-07-15 09:20:53,795 ] root in INFO : ssss
+[ 2021-07-15 09:20:53,797 ] werkzeug in INFO : 127.0.0.1 - - [15/Jul/2021 09:20:53] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[ 2021-07-15 09:21:42,152 ] INFO in app : Service detectionFautes Demarre
+[ 2021-07-15 09:21:42,152 ] INFO in app : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 09:21:42,152 ] INFO in app : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 09:21:42,158 ] INFO in werkzeug :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 09:21:44,421 ] INFO in werkzeug : 127.0.0.1 - - [15/Jul/2021 09:21:44] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 09:21:44,550 ] INFO in root : sql id is get
+[ 2021-07-15 09:21:44,550 ] INFO in root : ssss
+[ 2021-07-15 09:21:44,551 ] INFO in werkzeug : 127.0.0.1 - - [15/Jul/2021 09:21:44] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[ 2021-07-15 10:19:56,024 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 10:19:56,024 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 10:19:56,024 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 10:19:56,039 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 10:20:00,919 ] INFO : 127.0.0.1 - - [15/Jul/2021 10:20:00] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 10:20:01,187 ] INFO : sql id is get
+[ 2021-07-15 10:20:01,187 ] INFO : ssss
+[ 2021-07-15 10:20:01,189 ] INFO : 127.0.0.1 - - [15/Jul/2021 10:20:01] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[ 2021-07-15 10:40:02,804 ] INFO : Start plotting
+[ 2021-07-15 10:40:02,804 ] INFO : start preprocessing data
+[ 2021-07-15 10:40:08,634 ] INFO : hi
+[ 2021-07-15 10:40:08,635 ] WARNING : Request not completed due to unavailability of data
+[ 2021-07-15 10:40:08,635 ] INFO : 127.0.0.1 - - [15/Jul/2021 10:40:08] "[31m[1mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 400 -
+[ 2021-07-15 10:40:22,989 ] INFO : Start plotting
+[ 2021-07-15 10:40:22,990 ] INFO : start preprocessing data
+[ 2021-07-15 10:40:33,435 ] INFO : hi
+[ 2021-07-15 10:40:33,465 ] INFO : Faults database is valid. Start reading the faults from text file!
+[ 2021-07-15 10:40:33,612 ] INFO : 127.0.0.1 - - [15/Jul/2021 10:40:33] "[37mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:16:53,559 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 12:16:53,560 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 12:16:53,560 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 12:16:53,577 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 12:16:55,382 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:16:55] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:16:55,702 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:16:55] "[36mGET /static/load.css HTTP/1.1[0m" 304 -
+[ 2021-07-15 12:16:55,954 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:16:55] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:17:04,521 ] DEBUG : preprocessing data started
+[ 2021-07-15 12:17:04,522 ] ERROR : [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[ 2021-07-15 12:17:04,523 ] ERROR : Exception on /plot [GET]
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 88, in plot_sys_fault
+    sql_stores_dict = preprocessing.get_preprocessed_data(days=int(days_num), path_file=path_log)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 92, in get_preprocessed_data
+    data = read_date(path_file, days)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[ 2021-07-15 12:17:04,528 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:17:04] "[35m[1mGET /plot?sql_id=100343&days_num=1 HTTP/1.1[0m" 500 -
+[ 2021-07-15 12:20:37,584 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 12:20:37,584 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 12:20:37,584 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 12:20:37,601 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 12:20:39,765 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:20:39] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:20:39,927 ] ERROR : [Errno 2] No such file or directory: 'resourcess/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 69, in get_sql_id_list
+    file_sql_id = open(path)
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcess/sql_ids.txt'
+[ 2021-07-15 12:20:39,929 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:20:39] "[35m[1mGET /get_sql_ids HTTP/1.1[0m" 500 -
+[ 2021-07-15 12:21:21,969 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 12:21:21,970 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 12:21:21,970 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 12:21:21,987 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 12:21:46,011 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:21:46] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:21:46,100 ] ERROR : [Errno 2] No such file or directory: 'resourcess/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 69, in get_sql_id_list
+    file_sql_id = open(path)
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcess/sql_ids.txt'
+[ 2021-07-15 12:21:46,101 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:21:46] "[35m[1mGET /get_sql_ids HTTP/1.1[0m" 500 -
+[ 2021-07-15 12:23:53,279 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 12:23:53,279 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 12:23:53,279 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 12:23:53,299 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 12:23:57,471 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:23:57] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:23:57,585 ] ERROR : [Errno 2] No such file or directory: 'resourcess/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 69, in get_sql_id_list
+    file_sql_id = open(path)
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcess/sql_ids.txt'
+[ 2021-07-15 12:23:57,586 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:23:57] "[35m[1mGET /get_sql_ids HTTP/1.1[0m" 500 -
+[ 2021-07-15 12:24:27,525 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 12:24:27,530 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 12:24:27,530 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 12:24:27,545 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 12:24:32,905 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:24:32] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:24:33,006 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:24:33] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:27:13,403 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 12:27:13,404 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 12:27:13,404 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 12:27:13,419 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 12:27:18,040 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:27:18] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:27:18,142 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:27:18] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:27:22,688 ] DEBUG : preprocessing data started
+[ 2021-07-15 12:27:22,689 ] ERROR : [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[ 2021-07-15 12:27:22,689 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:27:22] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[ 2021-07-15 12:39:01,532 ] INFO : Service detectionFautes Demarre
+[ 2021-07-15 12:39:01,532 ] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[ 2021-07-15 12:39:01,533 ] INFO : Service detectionFautes Repertoire des journaux: logs
+[ 2021-07-15 12:39:01,557 ] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[ 2021-07-15 12:39:02,929 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:39:02] "[37mGET / HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:39:03,047 ] INFO : 127.0.0.1 - - [15/Jul/2021 12:39:03] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[ 2021-07-15 12:40:30,517 ] DEBUG : preprocessing data started
+[ 2021-07-15 12:40:30,518 ] ERROR : [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[2021-07-15 12:53:19,376] INFO : Service detectionFautes Demarre
+[2021-07-15 12:53:19,376] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-15 12:53:19,376] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-15 12:53:19,396] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-15 12:53:42,462] INFO : 127.0.0.1 - - [15/Jul/2021 12:53:42] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-15 12:53:42,576] INFO : 127.0.0.1 - - [15/Jul/2021 12:53:42] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-15 12:53:49,068] DEBUG : preprocessing data started
+[2021-07-15 12:54:00,122] DEBUG : check database validation
+[2021-07-15 12:54:00,123] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-15 12:54:00,124] DEBUG : sql id limitation started
+[2021-07-15 12:54:00,239] INFO : plotting is finished
+[2021-07-15 12:54:00,239] INFO : 127.0.0.1 - - [15/Jul/2021 12:54:00] "[37mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 200 -
+[2021-07-15 12:55:35,301] INFO : Service detectionFautes Demarre
+[2021-07-15 12:55:35,301] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-15 12:55:35,301] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-15 12:55:35,322] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-15 12:55:38,456] INFO : 127.0.0.1 - - [15/Jul/2021 12:55:38] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-15 12:55:38,617] INFO : 127.0.0.1 - - [15/Jul/2021 12:55:38] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-15 12:55:41,486] INFO : 127.0.0.1 - - [15/Jul/2021 12:55:41] "[37mGET /?fname= HTTP/1.1[0m" 200 -
+[2021-07-15 12:55:41,566] INFO : 127.0.0.1 - - [15/Jul/2021 12:55:41] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-15 12:55:49,275] DEBUG : preprocessing data started
+[2021-07-15 12:55:49,276] ERROR : [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[2021-07-15 12:55:49,276] INFO : 127.0.0.1 - - [15/Jul/2021 12:55:49] "[37mGET /plot?sql_id=100343&days_num=2 HTTP/1.1[0m" 200 -
+[2021-07-15 12:56:12,886] INFO : Service detectionFautes Demarre
+[2021-07-15 12:56:12,887] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-15 12:56:12,887] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-15 12:56:12,903] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-15 12:56:23,694] INFO : 127.0.0.1 - - [15/Jul/2021 12:56:23] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-15 12:56:29,465] DEBUG : preprocessing data started
+[2021-07-15 12:56:29,465] ERROR : [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[2021-07-15 12:56:29,466] INFO : 127.0.0.1 - - [15/Jul/2021 12:56:29] "[37mGET /plot?sql_id=100343&days_num=250 HTTP/1.1[0m" 200 -
+[2021-07-15 12:56:44,914] INFO : Service detectionFautes Demarre
+[2021-07-15 12:56:44,914] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-15 12:56:44,914] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-15 12:56:44,932] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-15 12:56:49,361] INFO : 127.0.0.1 - - [15/Jul/2021 12:56:49] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-15 12:56:49,490] INFO : 127.0.0.1 - - [15/Jul/2021 12:56:49] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-15 12:56:52,627] DEBUG : preprocessing data started
+[2021-07-15 12:56:52,627] ERROR : [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[2021-07-15 12:56:52,628] INFO : 127.0.0.1 - - [15/Jul/2021 12:56:52] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-15 12:57:55,044] INFO : Service detectionFautes Demarre
+[2021-07-15 12:57:55,044] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-15 12:57:55,044] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-15 12:57:55,064] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-15 12:57:59,626] INFO : 127.0.0.1 - - [15/Jul/2021 12:57:59] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-15 12:57:59,740] INFO : 127.0.0.1 - - [15/Jul/2021 12:57:59] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-15 12:58:04,879] DEBUG : preprocessing data started
+[2021-07-15 12:58:04,880] ERROR : [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 12, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Userss/DM3522/Desktop/access.log'
+[2021-07-15 12:58:04,890] INFO : 127.0.0.1 - - [15/Jul/2021 12:58:04] "[35m[1mGET /plot?sql_id=102283&days_num=280 HTTP/1.1[0m" 500 -
+[2021-07-16 09:18:09,263] INFO : Service detectionFautes Demarre
+[2021-07-16 09:18:09,263] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:18:09,263] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:18:09,284] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:18:11,913] INFO : 127.0.0.1 - - [16/Jul/2021 09:18:11] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:18:12,252] INFO : 127.0.0.1 - - [16/Jul/2021 09:18:12] "[36mGET /static/load.css HTTP/1.1[0m" 304 -
+[2021-07-16 09:18:12,565] INFO : 127.0.0.1 - - [16/Jul/2021 09:18:12] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:18:16,730] DEBUG : preprocessing data started
+[2021-07-16 09:18:22,715] WARNING : Request not completed due to unavailability of data
+[2021-07-16 09:18:22,716] INFO : 127.0.0.1 - - [16/Jul/2021 09:18:22] "[31m[1mGET /plot?sql_id=100343&days_num=10 HTTP/1.1[0m" 400 -
+[2021-07-16 09:26:10,284] INFO : Service detectionFautes Demarre
+[2021-07-16 09:26:10,284] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:26:10,284] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:26:10,300] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:26:12,391] INFO : 127.0.0.1 - - [16/Jul/2021 09:26:12] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:26:12,491] INFO : 127.0.0.1 - - [16/Jul/2021 09:26:12] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:26:30,159] INFO : Service detectionFautes Demarre
+[2021-07-16 09:26:30,159] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:26:30,159] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:26:30,191] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:26:31,764] INFO : 127.0.0.1 - - [16/Jul/2021 09:26:31] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:26:31,910] INFO : 127.0.0.1 - - [16/Jul/2021 09:26:31] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:26:36,632] DEBUG : preprocessing data started
+[2021-07-16 09:26:53,677] DEBUG : check database validation
+[2021-07-16 09:26:53,678] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:26:53,678] DEBUG : sql id limitation started
+[2021-07-16 09:26:53,680] ERROR : Exception on /plot [GET]
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+[2021-07-16 09:26:53,686] INFO : 127.0.0.1 - - [16/Jul/2021 09:26:53] "[35m[1mGET /plot?sql_id=100343&days_num=250 HTTP/1.1[0m" 500 -
+[2021-07-16 09:29:34,246] INFO : Service detectionFautes Demarre
+[2021-07-16 09:29:34,246] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:29:34,246] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:29:34,264] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:29:38,082] INFO : 127.0.0.1 - - [16/Jul/2021 09:29:38] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:29:38,211] INFO : 127.0.0.1 - - [16/Jul/2021 09:29:38] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:29:43,064] DEBUG : preprocessing data started
+[2021-07-16 09:29:59,529] DEBUG : check database validation
+[2021-07-16 09:29:59,529] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:29:59,530] DEBUG : sql id limitation started
+[2021-07-16 09:29:59,531] ERROR : time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+[2021-07-16 09:29:59,550] INFO : 127.0.0.1 - - [16/Jul/2021 09:29:59] "[35m[1mGET /plot?sql_id=100343&days_num=250 HTTP/1.1[0m" 500 -
+[2021-07-16 09:29:59,557] ERROR : Error on request:
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\serving.py", line 314, in execute
+    for data in application_iter:
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\wsgi.py", line 506, in __next__
+    return self._next()
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\wrappers\base_response.py", line 45, in _iter_encoded
+    for item in iterable:
+TypeError: 'ValueError' object is not iterable
+[2021-07-16 09:30:45,160] INFO : Service detectionFautes Demarre
+[2021-07-16 09:30:45,160] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:30:45,160] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:30:45,176] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:30:51,353] DEBUG : preprocessing data started
+[2021-07-16 09:31:34,682] DEBUG : check database validation
+[2021-07-16 09:31:34,683] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:31:34,684] DEBUG : sql id limitation started
+[2021-07-16 09:32:30,805] ERROR : time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+[2021-07-16 09:32:43,929] INFO : 127.0.0.1 - - [16/Jul/2021 09:32:43] "[35m[1mGET /plot?sql_id=100343&days_num=250 HTTP/1.1[0m" 500 -
+[2021-07-16 09:32:44,039] ERROR : Error on request:
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\serving.py", line 314, in execute
+    for data in application_iter:
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\wsgi.py", line 506, in __next__
+    return self._next()
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\wrappers\base_response.py", line 45, in _iter_encoded
+    for item in iterable:
+TypeError: 'ValueError' object is not iterable
+[2021-07-16 09:33:47,621] INFO : Service detectionFautes Demarre
+[2021-07-16 09:33:47,621] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:33:47,621] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:33:47,644] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:33:53,127] DEBUG : preprocessing data started
+[2021-07-16 09:34:14,767] DEBUG : check database validation
+[2021-07-16 09:34:14,768] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:34:14,768] DEBUG : sql id limitation started
+[2021-07-16 09:34:22,000] ERROR : time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+[2021-07-16 09:34:22,005] ERROR : Exception on /plot [GET]
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 168, in handle_exception
+    a = Response(e[0], status=500, mimetype='text/xml')
+TypeError: 'ValueError' object is not subscriptable
+[2021-07-16 09:34:22,903] ERROR : 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 168, in handle_exception
+    a = Response(e[0], status=500, mimetype='text/xml')
+TypeError: 'ValueError' object is not subscriptable
+[2021-07-16 09:34:22,927] INFO : 127.0.0.1 - - [16/Jul/2021 09:34:22] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-16 09:34:22,944] ERROR : Error on request:
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 168, in handle_exception
+    a = Response(e[0], status=500, mimetype='text/xml')
+TypeError: 'ValueError' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\DM3522\Anaconda3\envs\test\Lib\site-packages\flask\app.py", line 1879, in handle_exception
+    server_error = handler(server_error)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 168, in handle_exception
+    a = Response(e[0], status=500, mimetype='text/xml')
+TypeError: 'InternalServerError' object is not subscriptable
+[2021-07-16 09:34:50,296] INFO : Service detectionFautes Demarre
+[2021-07-16 09:34:50,296] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:34:50,297] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:34:50,324] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:34:50,510] DEBUG : preprocessing data started
+[2021-07-16 09:35:12,273] DEBUG : check database validation
+[2021-07-16 09:35:12,273] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:35:12,274] DEBUG : sql id limitation started
+[2021-07-16 09:36:05,606] INFO : Service detectionFautes Demarre
+[2021-07-16 09:36:05,606] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:36:05,606] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:36:05,622] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:36:06,731] DEBUG : preprocessing data started
+[2021-07-16 09:36:28,434] DEBUG : check database validation
+[2021-07-16 09:36:28,435] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:36:28,436] DEBUG : sql id limitation started
+[2021-07-16 09:36:59,497] ERROR : time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 48, in get_saved_faults
+    interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y=%m/%d-%H:%M:%S')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2015/10/05-11:20:00' does not match format '%Y=%m/%d-%H:%M:%S'
+[2021-07-16 09:37:01,336] INFO : 127.0.0.1 - - [16/Jul/2021 09:37:01] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-16 09:39:39,297] INFO : Service detectionFautes Demarre
+[2021-07-16 09:39:39,297] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:39:39,297] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:39:39,319] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:39:41,517] INFO : 127.0.0.1 - - [16/Jul/2021 09:39:41] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:39:41,636] INFO : 127.0.0.1 - - [16/Jul/2021 09:39:41] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:39:45,141] DEBUG : preprocessing data started
+[2021-07-16 09:39:56,476] DEBUG : check database validation
+[2021-07-16 09:39:56,476] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:39:56,477] DEBUG : sql id limitation started
+[2021-07-16 09:39:56,606] INFO : plotting is finished
+[2021-07-16 09:39:56,607] INFO : 127.0.0.1 - - [16/Jul/2021 09:39:56] "[37mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 200 -
+[2021-07-16 09:41:31,357] INFO : Service detectionFautes Demarre
+[2021-07-16 09:41:31,357] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:41:31,373] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:41:31,394] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:41:33,026] INFO : 127.0.0.1 - - [16/Jul/2021 09:41:33] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:41:33,120] INFO : 127.0.0.1 - - [16/Jul/2021 09:41:33] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:41:36,900] DEBUG : preprocessing data started
+[2021-07-16 09:41:42,339] INFO : 127.0.0.1 - - [16/Jul/2021 09:41:42] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-16 09:42:25,024] INFO : Service detectionFautes Demarre
+[2021-07-16 09:42:25,024] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:42:25,024] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:42:25,041] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:42:28,845] DEBUG : preprocessing data started
+[2021-07-16 09:42:39,317] INFO : 127.0.0.1 - - [16/Jul/2021 09:42:39] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-16 09:44:45,604] INFO : Service detectionFautes Demarre
+[2021-07-16 09:44:45,604] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:44:45,604] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:44:45,635] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:44:47,003] INFO : 127.0.0.1 - - [16/Jul/2021 09:44:47] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:44:47,137] INFO : 127.0.0.1 - - [16/Jul/2021 09:44:47] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:44:50,731] DEBUG : preprocessing data started
+[2021-07-16 09:45:01,862] DEBUG : check database validation
+[2021-07-16 09:45:01,862] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:45:01,862] DEBUG : sql id limitation started
+[2021-07-16 09:45:01,962] INFO : plotting is finished
+[2021-07-16 09:45:01,962] INFO : 127.0.0.1 - - [16/Jul/2021 09:45:01] "[37mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 200 -
+[2021-07-16 09:47:40,077] INFO : Service detectionFautes Demarre
+[2021-07-16 09:47:40,077] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:47:40,077] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:47:40,092] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:47:41,797] INFO : 127.0.0.1 - - [16/Jul/2021 09:47:41] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:47:41,892] INFO : 127.0.0.1 - - [16/Jul/2021 09:47:41] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:47:46,523] DEBUG : preprocessing data started
+[2021-07-16 09:47:58,514] DEBUG : check database validation
+[2021-07-16 09:47:58,515] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:47:58,515] DEBUG : sql id limitation started
+[2021-07-16 09:47:58,617] INFO : plotting is finished
+[2021-07-16 09:47:58,617] INFO : 127.0.0.1 - - [16/Jul/2021 09:47:58] "[37mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 200 -
+[2021-07-16 09:48:22,855] INFO : Service detectionFautes Demarre
+[2021-07-16 09:48:22,855] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-16 09:48:22,855] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-16 09:48:22,867] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-16 09:48:27,969] INFO : 127.0.0.1 - - [16/Jul/2021 09:48:27] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-16 09:48:28,066] INFO : 127.0.0.1 - - [16/Jul/2021 09:48:28] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-16 09:48:33,424] DEBUG : preprocessing data started
+[2021-07-16 09:48:44,386] DEBUG : check database validation
+[2021-07-16 09:48:44,386] INFO : Faults text file is valid. Start reading the faults from text file.
+[2021-07-16 09:48:44,386] DEBUG : sql id limitation started
+[2021-07-16 09:48:44,388] ERROR : list index out of range
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 102, in plot_sys_fault
+    fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 146, in creat_fig
+    sys_fault = fault_database.get_saved_faults(path_fault)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\fault_database.py", line 49, in get_saved_faults
+    interval_two = datetime.datetime.strptime(line.split(",")[100], '%Y/%m/%d-%H:%M:%S')
+IndexError: list index out of range
+[2021-07-16 09:48:44,396] INFO : 127.0.0.1 - - [16/Jul/2021 09:48:44] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-19 15:48:39,535] INFO : Service detectionFautes Demarre
+[2021-07-19 15:48:39,535] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 15:48:39,535] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-19 15:48:39,553] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-19 15:48:41,436] INFO : 127.0.0.1 - - [19/Jul/2021 15:48:41] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-19 15:48:41,760] INFO : 127.0.0.1 - - [19/Jul/2021 15:48:41] "[36mGET /static/load.css HTTP/1.1[0m" 304 -
+[2021-07-19 15:48:41,879] ERROR : [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 72, in get_sql_id_list
+    file_sql_id = open(path)
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'
+[2021-07-19 15:48:58,969] INFO : Service detectionFautes Demarre
+[2021-07-19 15:48:58,969] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 15:48:58,969] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-19 15:48:58,985] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-19 15:49:00,461] INFO : 127.0.0.1 - - [19/Jul/2021 15:49:00] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-19 15:49:00,604] ERROR : [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 72, in get_sql_id_list
+    file_sql_id = open(path)
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'
+[2021-07-19 15:49:21,234] INFO : Service detectionFautes Demarre
+[2021-07-19 15:49:21,234] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 15:49:21,234] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-19 15:49:21,250] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-19 15:49:25,741] INFO : 127.0.0.1 - - [19/Jul/2021 15:49:25] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-19 15:49:25,886] ERROR : [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 72, in get_sql_id_list
+    file_sql_id = open(path)
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'
+[2021-07-19 15:49:25,887] INFO : 127.0.0.1 - - [19/Jul/2021 15:49:25] "[35m[1mGET /get_sql_ids HTTP/1.1[0m" 500 -
+[2021-07-19 16:05:29,765] INFO : Service detectionFautes Demarre
+[2021-07-19 16:05:29,765] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 16:05:29,766] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-19 16:05:29,791] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-19 16:05:38,019] INFO : Service detectionFautes Demarre
+[2021-07-19 16:05:38,019] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 16:05:38,019] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-19 16:05:38,033] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-19 16:05:40,353] INFO : 127.0.0.1 - - [19/Jul/2021 16:05:40] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-19 16:05:40,496] INFO : 127.0.0.1 - - [19/Jul/2021 16:05:40] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-19 16:05:44,881] ERROR : there is an error in preprocessing the file
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 95, in plot_sys_fault
+    sql_stores_dict = preprocessing.get_preprocessed_data(days=int(days_num), path_file=path_log)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 87, in get_preprocessed_data
+    logging.debug("preprocessing data started")
+NameError: name 'logging' is not defined
+[2021-07-19 16:05:44,883] INFO : 127.0.0.1 - - [19/Jul/2021 16:05:44] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-19 16:06:21,992] INFO : Service detectionFautes Demarre
+[2021-07-19 16:06:21,992] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 16:06:21,992] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-19 16:06:22,023] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-19 16:06:26,900] INFO : 127.0.0.1 - - [19/Jul/2021 16:06:26] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-07-19 16:06:27,043] INFO : 127.0.0.1 - - [19/Jul/2021 16:06:27] "[37mGET /get_sql_ids HTTP/1.1[0m" 200 -
+[2021-07-19 16:06:33,383] DEBUG : preprocessing data started
+[2021-07-19 16:06:33,383] ERROR : [Errno 2] No such file or directory: 'C:/Users/DM3522/Desktop/accessd.log'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 95, in plot_sys_fault
+    sql_stores_dict = preprocessing.get_preprocessed_data(days=int(days_num), path_file=path_log)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 88, in get_preprocessed_data
+    data = read_date(path_file, days)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\data_processing\preprocessing.py", line 14, in read_date
+    file = open(path_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/DM3522/Desktop/accessd.log'
+[2021-07-19 16:06:33,384] INFO : 127.0.0.1 - - [19/Jul/2021 16:06:33] "[35m[1mGET /plot?sql_id=100343&days_num=200 HTTP/1.1[0m" 500 -
+[2021-07-19 16:08:04,097] INFO : Service detectionFautes Demarre
+[2021-07-19 16:08:04,097] INFO : Service detectionFautes Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 16:08:04,097] INFO : Service detectionFautes Repertoire des journaux: logs
+[2021-07-19 16:08:04,113] INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-19 16:08:05,562] ERROR : sys-faultt.html
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\app.py", line 116, in home
+    return render_template('sys-faultt.html')
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\jinja2\loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sys-faultt.html
+[2021-07-19 16:08:05,572] INFO : 127.0.0.1 - - [19/Jul/2021 16:08:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-07-19 16:08:05,623] ERROR : 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "C:\Users\DM3522\Anaconda3\envs\test\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2021-07-19 16:08:05,629] INFO : 127.0.0.1 - - [19/Jul/2021 16:08:05] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -

@@ -1,0 +1,45 @@
+[2021-07-19 11:26:06,435] INFO : Service update_sql_id Demarre
+[2021-07-19 11:26:06,435] INFO : Service update_sql_id Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 11:26:06,435] INFO : Service update_sql_id Repertoire des journaux: logs
+[2021-07-19 11:26:06,435] INFO : start updating sql_id.txt every 20 days at time 03:00
+[2021-07-19 11:26:10,455] DEBUG : Running job Job(interval=1, unit=minutes, do=save_sql_id_list, args=('C:/Users/DM3522/Desktop/access.log', 'resources/sql_ids.txt'), kwargs={})
+[2021-07-19 11:26:10,455] DEBUG : start updating
+[2021-07-19 11:26:24,824] DEBUG : sql_ids.txt is updated
+[2021-07-19 15:31:29,811] INFO : Service update_sql_id Demarre
+[2021-07-19 15:31:29,812] INFO : Service update_sql_id Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 15:31:29,812] INFO : Service update_sql_id Repertoire des journaux: logs
+[2021-07-19 15:31:29,812] INFO : start updating sql_id.txt every 7 days at time 03:00
+[2021-07-19 15:32:10,120] DEBUG : Running job Job(interval=1, unit=minutes, do=save_sql_id_list, args=('C:/Users/DM3522/Desktop/access.log', 'resources/sql_ids.txt'), kwargs={})
+[2021-07-19 15:32:10,120] DEBUG : start updating the sql_ids.txt
+[2021-07-19 15:32:30,919] DEBUG : sql_ids.txt is updated
+[2021-07-19 15:33:10,499] DEBUG : Running job Job(interval=1, unit=minutes, do=save_sql_id_list, args=('C:/Users/DM3522/Desktop/access.log', 'resources/sql_ids.txt'), kwargs={})
+[2021-07-19 15:33:10,499] DEBUG : start updating the sql_ids.txt
+[2021-07-19 15:33:26,641] DEBUG : sql_ids.txt is updated
+[2021-07-19 15:34:05,994] INFO : Service update_sql_id Demarre
+[2021-07-19 15:34:05,994] INFO : Service update_sql_id Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 15:34:05,994] INFO : Service update_sql_id Repertoire des journaux: logs
+[2021-07-19 15:34:05,994] INFO : start updating sql_id.txt every 7 days at time 03:00
+[2021-07-19 15:34:10,011] DEBUG : Running job Job(interval=1, unit=minutes, do=save_sql_id_list, args=('C:/Users/DM3522/Desktop/access.log', 'resourcessss/sql_ids.txt'), kwargs={})
+[2021-07-19 15:34:10,011] DEBUG : start updating the sql_ids.txt
+[2021-07-19 15:34:14,365] ERROR : [Errno 2] No such file or directory: 'resourcessss/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\update_sql_id.py", line 18, in save_sql_id_list
+    file = open(path_sqls, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcessss/sql_ids.txt'
+[2021-07-19 15:35:41,144] INFO : Service update_sql_id Demarre
+[2021-07-19 15:35:41,146] INFO : Service update_sql_id Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 15:35:41,146] INFO : Service update_sql_id Repertoire des journaux: logs
+[2021-07-19 15:35:41,146] INFO : start updating sql_id.txt every 7 days at time 03:00
+[2021-07-19 15:36:10,294] DEBUG : Running job Job(interval=1, unit=minutes, do=save_sql_id_list, args=('C:/Users/DM3522/Desktop/access.log', 'resources/sql_ids.txt'), kwargs={})
+[2021-07-19 15:36:10,294] DEBUG : start updating the sql_ids.txt
+[2021-07-19 15:36:16,384] INFO : Service update_sql_id Demarre
+[2021-07-19 15:36:16,384] INFO : Service update_sql_id Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 15:36:16,384] INFO : Service update_sql_id Repertoire des journaux: logs
+[2021-07-19 15:36:16,384] INFO : start updating sql_id.txt every 7 days at time 03:00
+[2021-07-19 15:37:10,733] DEBUG : Running job Job(interval=1, unit=minutes, do=save_sql_id_list, args=('C:/Users/DM3522/Desktop/access.log', 'resourcesss/sql_ids.txt'), kwargs={})
+[2021-07-19 15:37:10,733] DEBUG : start updating the sql_ids.txt
+[2021-07-19 15:37:14,948] ERROR : [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'
+Traceback (most recent call last):
+  File "C:\Users\DM3522\Desktop\sys-fault-detection\update_sql_id.py", line 18, in save_sql_id_list
+    file = open(path_sqls, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'resourcesss/sql_ids.txt'

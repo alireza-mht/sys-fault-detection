@@ -2,19 +2,7 @@ import numpy as np
 import pandas as pd
 import datetime
 import plotly.graph_objects as go
-
-
-def roundTime(dt=None, roundTo=60):
-    """Round a datetime object to any time lapse in seconds
-    dt : datetime.datetime object, default now.
-    roundTo : Closest number of seconds to round to, default 1 minute.
-    Author: Thierry Husson 2012 - Use it as you want but don't blame me.
-    """
-    if dt is None: dt = datetime.datetime.now()
-    seconds = (dt.replace(tzinfo=None) - dt.min).seconds
-    rounding = (seconds + roundTo / 2) // roundTo * roundTo
-    return dt - datetime.timedelta(0, rounding - seconds, -dt.microsecond)
-
+import logging
 
 def group_average_by_minutes(samples, minutes, start_time, end_time):
     """ group the moving average of one specific sql_id based on the defined start time and end time
@@ -62,7 +50,7 @@ def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_interval
         return :
             list of start time and end time of system faults
     """
-
+    logging.debug("calculating the faults")
     # get the first value to check the size of sql_ids
     values = grouped_by_minutes.values()
     value_iterator = iter(values)
@@ -100,6 +88,7 @@ def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_interval
 def group_by_minutes(sql_store_dict, time_interval):
     """ group all the sql_ids based on the minimum start time and maximum end time of all sql_ids
     """
+    logging.debug("grouping data by minutes started")
     grouped_by_minutes = {}
 
     # find the minimum time and maximum time of all sql_ids in all sql_id data starts from start time and ends by the

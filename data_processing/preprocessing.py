@@ -1,13 +1,21 @@
 import numpy as np
 import datetime
-import os
+import logging
 
 
-def read_date(path_file, days):
-    now = datetime.datetime.now()
-    start_time = now - datetime.timedelta(days=days)
+def read_date(path_file, days=None):
+    if days is not None:
+        now = datetime.datetime.now()
+        start_time = now - datetime.timedelta(days=days)
+    else:
+        start_time = datetime.datetime.min
 
+    # try:
     file = open(path_file)
+    # except OSError as e:
+    #     logging.error(e, exc_info=True)
+    #     raise
+
     lines = file.read().splitlines()
     data = []
 
@@ -60,9 +68,7 @@ def moving_average(data, window_size):
     if len(data_y) < window_size:
         window_size = len(data_y)
 
-    i = 0
     moving_averages = []
-
     for i in range(len(data_y) - window_size + 1):
         this_window = data_y[i: i + window_size]
 
@@ -77,18 +83,15 @@ def moving_average(data, window_size):
     return [data[0], moving_averages]
 
 
-def get_preprocessed_data(days, path_file=None):
-    if path_file is None:
-        dirname = os.path.dirname(__file__)
-        path_file = os.path.join(dirname, '../resources/access.log')
-
+def get_preprocessed_data(path_file, days=None):
+    logging.debug("preprocessing data started")
     data = read_date(path_file, days)
     sql_store_dict = grouped_by_sql_store_id(data)
-
     return sql_store_dict
 
 
 def limit_sql_id(sql_ids, time):
+    logging.debug("sql id limitation started")
     time = datetime.datetime.strptime(time, '%Y/%m/%d-%H:%M:%S')
     empty_sql_id = []
     for sql_id in sql_ids:
@@ -114,7 +117,7 @@ def limit_sql_id(sql_ids, time):
     return sql_ids
 
 
-def get_first_start_time(path_file):
+def get_last_updated_time(path_file):
     file = open(path_file)
     lines = file.read().splitlines()
 

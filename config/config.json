@@ -1,0 +1,13 @@
+{
+  "DEBUG": true,
+  "LOG_DATA_DIR": "C:/Users/DM3522/Desktop/access.log",
+  "FAULT_DATA_DIR": "resources/faults.txt",
+  "SQL_ID_DATA_DIR":"resources/sql_ids.txt",
+  "TIME_INTERVAL" : 10,
+  "ACCEPTANCE_RATE": 0.9,
+  "MIN_VALID_PAIR_INTERVAL": 10,
+  "WINDOWS_SIZE_MOVING_AVERAGE": 500,
+  "LOG_DIR": "logs",
+  "LOG_MAX_SIZE": 1000000,
+  "LOG_MAX_FILES": 10
+}

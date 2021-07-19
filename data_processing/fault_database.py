@@ -1,7 +1,10 @@
 import datetime
+import logging
 
 
 def is_valid_database(time_interval, acceptance_rate, min_valid_pair_intervals, path):
+    logging.debug("check database validation")
+
     file = open(path)
     lines = file.read().splitlines()
     file.close()
@@ -22,10 +25,11 @@ def creat_database(time_interval, acceptance_rate, min_valid_pair_intervals, tim
     file.close()
 
 
-def write_new_faults(end_time, sys_faults, path):
+def write_new_faults(last_update, sys_faults, path):
+
     file = open(path, "r")
     list_of_lines = file.readlines()
-    list_of_lines[0] = "end_time: " + end_time.strftime('%Y/%m/%d-%H:%M:%S') + "\n"
+    list_of_lines[0] = "last_update: " + last_update.strftime('%Y/%m/%d-%H:%M:%S') + "\n"
 
     for i in range(len(sys_faults)):
         list_of_lines.append(sys_faults[i][0]
@@ -43,7 +47,7 @@ def get_saved_faults(path):
     fault_pair_time_intervals = []
     for line in list_of_lines[4:]:
         interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y/%m/%d-%H:%M:%S')
-        interval_two = datetime.datetime.strptime(line.split(",")[1], '%Y/%m/%d-%H:%M:%S')
+        interval_two = datetime.datetime.strptime(line.split(",")[100], '%Y/%m/%d-%H:%M:%S')
         fault_pair_time_intervals.append((interval_one, interval_two))
     return fault_pair_time_intervals
 

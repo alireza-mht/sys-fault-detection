@@ -41,19 +41,24 @@
         let theUrl = "http://127.0.0.1:5000/get_sql_ids"
         let xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function () {
-            if (xmlHttp.status === 200 && xmlHttp.readyState === 4) {
+            if (xmlHttp.readyState === 4) {
+                if (xmlHttp.status === 200) {
 
-                let elements = JSON.parse(xmlHttp.responseText);
-                let select = document.querySelector("#myid")
-
-                for (let elt of elements) {
-                    let option = document.createElement("option");
-                    option.text = elt;
-                    option.value = elt;
-                    select.appendChild(option);
+                    let elements = JSON.parse(xmlHttp.responseText);
+                    let select = document.querySelector("#myid")
+                    for (let elt of elements) {
+                        let option = document.createElement("option");
+                        option.text = elt;
+                        option.value = elt;
+                        select.appendChild(option);
+                    }
+                    document.getElementById("loader").style.display = "none"
+                    document.getElementById("page").style.display = "block"
+                }else{
+                    document.getElementById("loader").style.display = "none"
+                    document.getElementById("page").style.display = "block"
+                    showError("There is an internal server error \n " + xmlHttp.responseText)
                 }
-                document.getElementById("loader").style.display = "none"
-                document.getElementById("page").style.display = "block"
             }
         };
         xmlHttp.open("GET", theUrl);
@@ -79,21 +84,24 @@
         child.id = "chart";
         document.getElementById("data").append(child)
 
-        if (days === "" || days==="0" ) {
+        if (days === "" || days === "0") {
             showError("please enter valid days number")
         } else {
             let theUrl = "http://127.0.0.1:5000/plot?sql_id=" + sql_id + "&days_num=" + days
             let xmlHttp = new XMLHttpRequest();
             xmlHttp.onreadystatechange = function () {
+                if(xmlHttp.readyState === 4) {
+                    if (xmlHttp.status === 200) {
 
-                if (xmlHttp.status === 200 && xmlHttp.readyState === 4) {
+                        document.getElementById("loader-graph").style.display = "none"
+                        let graph = JSON.parse(xmlHttp.responseText);
+                        Plotly.plot('chart', graph, {});
 
-                    document.getElementById("loader-graph").style.display = "none"
-                    let graph = JSON.parse(xmlHttp.responseText);
-                    Plotly.plot('chart', graph, {});
-
-                } else if (xmlHttp.status === 400 && xmlHttp.readyState === 4) {
-                    showError(xmlHttp.responseText)
+                    } else if (xmlHttp.status === 400) {
+                        showError(xmlHttp.responseText)
+                    }else{
+                        showError("There is an internal server error \n " + xmlHttp.responseText)
+                    }
                 }
             };
             xmlHttp.open("GET", theUrl);
