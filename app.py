@@ -55,9 +55,9 @@ if app.config['DEBUG']:
 else:
     root.setLevel(logging.INFO)
 
-root.info('Service detectionFautes started')
-root.info('Service detectionFautes configuration file: ' + config_file)
-root.info('Service detectionFautes logs of reports: ' + app.config['LOG_DIR'])
+root.info('Service faults_detection started')
+root.info('Service faults_detection configuration file: ' + config_file)
+root.info('Service faults_detection logs of reports: ' + app.config['LOG_DIR'])
 
 
 # --------------------------------

@@ -18,7 +18,7 @@ def update_faults(path_log, path_fault, interval, rate, min_valid_pair):
                                                              path_fault)
     except OSError as e:
         root.error(e, exc_info=True)
-        print("There is no file or such directory!")
+        print("There is not such file or directory!")
         exit(-1)
 
     time_now = datetime.datetime.now()
@@ -105,14 +105,14 @@ min_valid_pair_intervals = config['MIN_VALID_PAIR_INTERVAL']
 days_interval = 2
 time_to_run = "03:00"
 root.info('start updating faults.txt every ' + str(days_interval) + ' days at time ' + time_to_run)
-# schedule.every(days_interval).days.at(time_to_run).do(update_faults, path_log, path_fault, time_interval,
-#                                                       acceptance_rate, min_valid_pair_intervals)
+schedule.every(days_interval).days.at(time_to_run).do(update_faults, path_log, path_fault, time_interval,
+                                                       acceptance_rate, min_valid_pair_intervals)
 
-# examples:
+# examples for the test:
 #schedule.every(2).minutes.at(":10").do(update_faults, path_log, path_fault, time_interval,
 #                                       acceptance_rate, min_valid_pair_intervals)
-schedule.every(20).seconds.do(update_faults, path_log, path_fault, time_interval, acceptance_rate,
-                              min_valid_pair_intervals)
+#schedule.every(60).seconds.do(update_faults, path_log, path_fault, time_interval, acceptance_rate,
+                              # min_valid_pair_intervals)
 
 # test:
 # update_faults(path_log, path_fault, time_interval, acceptance_rate, min_valid_pair_intervals)

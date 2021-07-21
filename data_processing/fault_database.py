@@ -47,7 +47,7 @@ def get_saved_faults(path):
     fault_pair_time_intervals = []
     for line in list_of_lines[4:]:
         interval_one = datetime.datetime.strptime(line.split(",")[0], '%Y/%m/%d-%H:%M:%S')
-        interval_two = datetime.datetime.strptime(line.split(",")[100], '%Y/%m/%d-%H:%M:%S')
+        interval_two = datetime.datetime.strptime(line.split(",")[1], '%Y/%m/%d-%H:%M:%S')
         fault_pair_time_intervals.append((interval_one, interval_two))
     return fault_pair_time_intervals
 
