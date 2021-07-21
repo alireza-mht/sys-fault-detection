@@ -117,19 +117,6 @@ def limit_sql_id(sql_ids, time):
     return sql_ids
 
 
-def get_last_updated_time(path_file):
-    file = open(path_file)
-    lines = file.read().splitlines()
 
-    for line in lines:
-        data_line = line.split()
-        line_date = data_line[3].replace('[', '').replace(':', ' ', 1)
-        line_date = datetime.datetime.strptime(line_date, '%d/%b/%Y %H:%M:%S')
 
-        # some data do not have sql_id
-        if "sqlstore_id" in line:
-            sql_id = data_line[6].split("sqlstore_id=")[1].split("&")[0]
 
-            # some data do not have response time and some of them have error
-            if len(data_line) == 10 and data_line[9].isdigit() and sql_id != 'null':
-                return line_date
