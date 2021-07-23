@@ -87,14 +87,13 @@ def plot_sys_fault():
     days_num = request.args.get('days_num', None)
     path_log = app.config['LOG_DATA_DIR']
     path_fault = app.config['FAULT_DATA_DIR']
-
+    get_info(sql_id, path_log)
     # check if we have enough data
     try:
         sql_stores_dict = preprocessing.get_preprocessed_data(days=int(days_num), path_file=path_log)
     except FileNotFoundError as e:
         root.error(e, exc_info=True)
         return Response("file not found", status=500, mimetype='text/xml')
-
 
     if len(sql_stores_dict) == 0 or int(sql_id) not in sql_stores_dict.keys():
         logging.warning("Request not completed due to unavailability of data")
@@ -157,6 +156,12 @@ def creat_fig(sql_stores_dict, sql_id, path_fault):
     moved_average = preprocessing.moving_average(sql_id_plot[sql_id], window_size=window_size)
     return system_fault.plot_sys_fault(moved_average, sql_id, sys_fault, time_interval=time_interval)
 
+
+def get_info(sql_id, path_log):
+    sql_stores = preprocessing.get_info_for_sql_id(path_log, 365, sql_id)
+    last_date = sql_stores['date'][-1]
+    number_of_requests = preprocessing.get_number_of_requests_per_month(sql_stores['date'])
+    ip_address = preprocessing.get_number_of_ip(sql_stores['date'], sql_stores['ip_address'])
 
 @app.errorhandler(Exception)
 def handle_exception(e):

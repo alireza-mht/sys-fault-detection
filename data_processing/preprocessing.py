@@ -1,6 +1,7 @@
 import numpy as np
 import datetime
 import logging
+import pandas as pd
 
 
 def read_date(path_file, days=None):
@@ -34,7 +35,7 @@ def read_date(path_file, days=None):
             sql_id = data_line[6].split("sqlstore_id=")[1].split("&")[0]
 
             # some data do not have response time and some of them have error
-            if len(data_line) == 10 and data_line[9].isdigit() and sql_id != 'null':
+            if data_line[9].isdigit() and sql_id != 'null':
                 data.append(
                     [line_date,
                      np.int64(data_line[6].split("sqlstore_id=")[1].split("&")[0]),
@@ -84,13 +85,75 @@ def moving_average(data, window_size):
 
 
 def get_preprocessed_data(path_file, days=None):
+    """ reading all the sql_id from the log file and group all the data based on the sql_id
+
+                Parameters:
+                    path_file: path to the access.log
+                    days: just read and process the data from just specific days ago
+
+                return :
+                    dictionary of all the sql_ids in the last n days. The key of dictionary is the sql_ids and the
+                    value of dictionary includes two list. The first one is the date and the second list is the latency.
+                    values in these lists are mapped to each other
+    """
+
     logging.debug("preprocessing data started")
     data = read_date(path_file, days)
     sql_store_dict = grouped_by_sql_store_id(data)
     return sql_store_dict
 
 
+def get_info_for_sql_id(path_file, days, sql_id):
+    now = datetime.datetime.now()
+    start_time = now - datetime.timedelta(days=days)
+    start_time = datetime.datetime(year=start_time.year, month=start_time.month, day=1)
+    # try:
+    file = open(path_file)
+
+    lines = file.read().splitlines()
+    data = []
+    date = []
+    ip_address = []
+    for line in reversed(lines):
+        data_line = line.split()
+        line_date = data_line[3].replace('[', '').replace(':', ' ', 1)
+        line_date = datetime.datetime.strptime(line_date, '%d/%b/%Y %H:%M:%S')
+
+        # break if the line_date exceeded the request date
+        if line_date < start_time:
+            break
+
+        # some data do not have sql_id
+        if "sqlstore_id" in line:
+            sql_id_log = data_line[6].split("sqlstore_id=")[1].split("&")[0]
+
+            # some data do not have response time and some of them have error
+            if data_line[9].isdigit() and sql_id_log != 'null' and sql_id_log == sql_id:
+                date.append(line_date)
+                ip_address.append(data_line[0])
+                # data.append(
+                #     [line_date,
+                #      np.int64(data_line[6].split("sqlstore_id=")[1].split("&")[0]),
+                #      data_line[0]])
+    dictionary = {
+        "date": date,
+        "sql_id": sql_id,
+        "ip_address": ip_address
+    }
+    return dictionary
+
+
 def limit_sql_id(sql_ids, time):
+    """ remove the data before a special date for all the sql_ids
+
+            Parameters:
+                sql_ids: all the sql_ids in a dictionary
+                time: remove the sql_ids before this time in string
+
+            return :
+                dictionary of all the sql_ids after the mentioned time
+    """
+
     logging.debug("sql id limitation started")
     time = datetime.datetime.strptime(time, '%Y/%m/%d-%H:%M:%S')
     empty_sql_id = []
@@ -117,6 +180,54 @@ def limit_sql_id(sql_ids, time):
     return sql_ids
 
 
+def get_number_of_requests_per_month(dates):
+    # dates.append(time_now)
+    sample_x_pd = pd.to_datetime(dates)
+    df = pd.DataFrame(sample_x_pd, columns=['Date'])
+    df['Count'] = np.ones(len(dates))
+    freq_rate = '1MS'
+    grouped = df.groupby(pd.Grouper(key='Date', freq=freq_rate)).sum()
+    grouped_reset = grouped.reset_index()
+    Row_list = []
+
+    # Iterate over each row
+    for index, rows in grouped_reset.iterrows():
+        # Create list for the current row
+        my_list = [rows.Date, rows.Count]
+
+        # append the list to the final list
+        Row_list.append(my_list)
+    return Row_list
 
 
+# [grouped.index.values.astype('M8[s]').astype('O'), grouped['Count'].values]
 
+
+def get_number_of_ip(dates, ip_addresses):
+    time_now = datetime.datetime.now()
+    # dates.append(time_now)
+    # ip_addresses.append(" ")
+
+    sample_x_pd = pd.to_datetime(dates)
+
+    df = pd.DataFrame(sample_x_pd, columns=['Date'])
+    df.insert(1, 'Ip', ip_addresses)
+
+    df['Count'] = np.concatenate((np.ones(len(dates) - 1), np.zeros(1)), axis=0)
+    freq_rate = '1MS'
+    grouped_by_date_ip = df.groupby([pd.Grouper(key='Date', freq=freq_rate), "Ip"]).sum()
+    df = grouped_by_date_ip.reset_index()
+    # df_date_ip = pd.DataFrame(grouped_by_date_ip)
+    # grouped_by_date = reset.groupby(['Date'])
+    # print(grouped_by_date.head())
+    Row_list = []
+
+    # Iterate over each row
+    for index, rows in df.iterrows():
+        # Create list for the current row
+        my_list = [rows.Date, rows.Ip, rows.Count]
+
+        # append the list to the final list
+        Row_list.append(my_list)
+
+    return Row_list
