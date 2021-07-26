@@ -1,5 +1,3 @@
-import time
-import schedule
 import datetime
 from data_processing import preprocessing, system_fault, fault_database
 from getopt import getopt, GetoptError
@@ -13,6 +11,7 @@ from logging.handlers import RotatingFileHandler
 def update_faults(path_log, path_fault, interval, rate, min_valid_pair):
     root.debug("start updating")
 
+    is_database_valid = False
     try:
         is_database_valid = fault_database.is_valid_database(time_interval, acceptance_rate, min_valid_pair_intervals,
                                                              path_fault)
@@ -105,18 +104,4 @@ min_valid_pair_intervals = config['MIN_VALID_PAIR_INTERVAL']
 days_interval = 2
 time_to_run = "03:00"
 root.info('start updating faults.txt every ' + str(days_interval) + ' days at time ' + time_to_run)
-schedule.every(days_interval).days.at(time_to_run).do(update_faults, path_log, path_fault, time_interval,
-                                                       acceptance_rate, min_valid_pair_intervals)
-
-# examples for the test:
-#schedule.every(2).minutes.at(":10").do(update_faults, path_log, path_fault, time_interval,
-#                                       acceptance_rate, min_valid_pair_intervals)
-#schedule.every(60).seconds.do(update_faults, path_log, path_fault, time_interval, acceptance_rate,
-                              # min_valid_pair_intervals)
-
-# test:
-# update_faults(path_log, path_fault, time_interval, acceptance_rate, min_valid_pair_intervals)
-
-while 1:
-    schedule.run_pending()
-    time.sleep(1)
+update_faults(path_log, path_fault, time_interval, acceptance_rate, min_valid_pair_intervals)

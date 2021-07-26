@@ -1,5 +1,4 @@
-import time
-import schedule
+
 from getopt import getopt, GetoptError
 import os
 import sys
@@ -92,11 +91,4 @@ path_sql_id = config['SQL_ID_DATA_DIR']
 days_interval = 7
 time_to_run = "03:00"
 root.info('start updating sql_id.txt every ' + str(days_interval) + ' days at time ' + time_to_run)
-schedule.every(days_interval).days.at(time_to_run).do(save_sql_id_list, path_log, path_sql_id)
-
-# example of test
-#schedule.every(1).minutes.at(":10").do(save_sql_id_list, path_log, path_sql_id)
-
-while 1:
-    schedule.run_pending()
-    time.sleep(1)
+save_sql_id_list( path_log, path_sql_id)
