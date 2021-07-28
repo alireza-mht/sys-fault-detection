@@ -101,7 +101,5 @@ min_valid_pair_intervals = config['MIN_VALID_PAIR_INTERVAL']
 #               Run
 # --------------------------------
 
-days_interval = 2
-time_to_run = "03:00"
-root.info('start updating faults.txt every ' + str(days_interval) + ' days at time ' + time_to_run)
+root.info('start updating faults.txt')
 update_faults(path_log, path_fault, time_interval, acceptance_rate, min_valid_pair_intervals)

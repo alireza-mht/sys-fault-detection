@@ -2,45 +2,74 @@ import numpy as np
 import datetime
 import logging
 import pandas as pd
+import os
 
 
-def read_date(path_file, days=None):
+def read_date(path_dir, days=None):
     if days is not None:
         now = datetime.datetime.now()
         start_time = now - datetime.timedelta(days=days)
     else:
         start_time = datetime.datetime.min
+    current_dir = os.getcwd()
+    # Change the directory
+    os.chdir(path_dir)
+    if len(os.listdir()) == 0:
+        logging.warning("There is not any log file to be processed")
 
-    # try:
-    file = open(path_file)
-    # except OSError as e:
-    #     logging.error(e, exc_info=True)
-    #     raise
-
-    lines = file.read().splitlines()
+    code_status = '200'
     data = []
+    # iterate through all file
+    for log_file in reversed(os.listdir()):
+        # Check whether file is in text format or not
+        if log_file.endswith(".txt"):
+            file_path = path_dir + os.sep + log_file
+            file = open(file_path)
+            lines = file.read().splitlines()
 
-    # we start iterating from end to be able to break the for loop. Better performance
-    for line in reversed(lines):
-        data_line = line.split()
-        line_date = data_line[3].replace('[', '').replace(':', ' ', 1)
-        line_date = datetime.datetime.strptime(line_date, '%d/%b/%Y %H:%M:%S')
+            # we start iterating from end to be able to break the for loop. Better performance
+            for line in reversed(lines):
+                # some data do not have sql_id
+                if "sqlstore_id" in line:
+                    data_line = line.split()
+                    if data_line[1] != '-':
+                        date_index = 1
+                    else:
+                        date_index = 3
 
-        # break if the line_date exceeded the request date
-        if line_date < start_time:
-            break
+                    line_date = data_line[date_index].replace('[', '').replace(':', ' ', 1)
+                    line_date = datetime.datetime.strptime(line_date, '%d/%b/%Y %H:%M:%S')
+                    # break if the line_date exceeded the request date
+                    if line_date < start_time:
+                        file.close()
+                        os.chdir(current_dir)
+                        # return from latest time up until now
+                        return reversed(data)
 
-        # some data do not have sql_id
-        if "sqlstore_id" in line:
-            sql_id = data_line[6].split("sqlstore_id=")[1].split("&")[0]
+                    if len(data_line) == 10:
+                        status_index = 8
+                        sql_id_index = 6
+                        time_index = 9
+                    else:
+                        status_index = 7
+                        sql_id_index = 5
+                        time_index = 8
 
-            # some data do not have response time and some of them have error
-            if data_line[9].isdigit() and sql_id != 'null':
-                data.append(
-                    [line_date,
-                     np.int64(data_line[6].split("sqlstore_id=")[1].split("&")[0]),
-                     np.int64(data_line[8]), np.int64(data_line[9])])
+                    if data_line[status_index] == code_status:
+                        sql_id = data_line[sql_id_index].split("sqlstore_id=")[1].split("&")[0]
+                        # some data do not have response time and some of them have error
+                        if data_line[time_index].isdigit() and sql_id != 'null':
+                            data.append(
+                                [line_date,
+                                 np.int64(data_line[sql_id_index].split("sqlstore_id=")[1].split("&")[0]),
+                                 np.int64(data_line[time_index])])
 
+            file.close()
+        else:
+            logging.warning("Log file is not in .txt format")
+
+    os.chdir(current_dir)
+    # return from latest time up until now
     return reversed(data)
 
 
@@ -56,7 +85,7 @@ def grouped_by_sql_store_id(data):
     sql_processed = {}
     for dict in sql_data:
         sql_processed[dict] = list()
-        response_time = np.array([ele[3] for ele in sql_data[dict]])
+        response_time = np.array([ele[2] for ele in sql_data[dict]])
         date = np.array([ele[0] for ele in sql_data[dict]])
         sql_processed[dict].append(date)
         sql_processed[dict].append(response_time)

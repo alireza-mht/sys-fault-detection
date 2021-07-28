@@ -26,19 +26,19 @@ def creat_database(time_interval, acceptance_rate, min_valid_pair_intervals, tim
 
 
 def write_new_faults(last_update, sys_faults, path):
-
     file = open(path, "r")
     list_of_lines = file.readlines()
     list_of_lines[0] = "last_update: " + last_update.strftime('%Y/%m/%d-%H:%M:%S') + "\n"
+    file.close()
 
     for i in range(len(sys_faults)):
         list_of_lines.append(sys_faults[i][0]
                              .strftime('%Y/%m/%d-%H:%M:%S') + "," +
                              sys_faults[i][1]
                              .strftime('%Y/%m/%d-%H:%M:%S') + "\n")
-        file = open(path, "w")
-        file.writelines(list_of_lines)
-        file.close()
+    file = open(path, "w")
+    file.writelines(list_of_lines)
+    file.close()
 
 
 def get_saved_faults(path):

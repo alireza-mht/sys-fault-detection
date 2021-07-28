@@ -1,4 +1,3 @@
-
 from getopt import getopt, GetoptError
 import os
 import sys
@@ -7,30 +6,56 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 
-def save_sql_id_list(path_file, path_sqls):
+def save_sql_id_list(path_dir, path_sqls):
     root.debug("start updating the sql_ids.txt")
-    file_log = open(path_file)
-    lines = file_log.read().splitlines()
-    data = []
 
+    sql_id_file = open(path_sqls, "w")
     try:
-        file = open(path_sqls, "w")
+        # Change the directory
+        os.chdir(path_dir)
     except Exception as e:
         root.error(e, exc_info=True)
         print("There is not such file or directory!")
         exit(-1)
 
-    with file as file_save:
-        # we start iterating from end to be able to break the for loop. Better performance
-        for line in reversed(lines):
-            data_line = line.split()
+    data = []
+    if len(os.listdir()) == 0:
+        root.warning("There is not any log file to be processed")
 
-            # some data do not have sql_id
-            if "sqlstore_id" in line:
-                sql_id = data_line[6].split("sqlstore_id=")[1].split("&")[0]
-                if sql_id != "null" and int(sql_id) not in data:
-                    data.append(int(sql_id))
-                    file_save.write(sql_id + "\n")
+    # iterate through all file
+    with sql_id_file as file_save:
+        for file_log in os.listdir():
+            # Check whether file is in text format or not
+            if file_log.endswith(".txt"):
+                file_path = path_dir + os.sep + file_log
+                file = open(file_path)
+                lines = file.read().splitlines()
+
+                # we start iterating from end to be able to break the for loop. Better performance
+                for line in lines:
+                    # some data do not have sql_id
+                    if "sqlstore_id" in line:
+                        data_line = line.split()
+
+                        if len(data_line) == 10:
+                            status_index = 8
+                            sql_id_index = 6
+
+                        else:
+                            status_index = 7
+                            sql_id_index = 5
+
+                        if data_line[status_index] == '200':
+                            sql_id = data_line[sql_id_index].split("sqlstore_id=")[1].split("&")[0]
+                            # some data do not have response time and some of them have error
+                            if sql_id != 'null' and int(sql_id) not in data:
+                                data.append(int(sql_id))
+                                file_save.write(sql_id + "\n")
+
+                file.close()
+            else:
+                logging.warning("Log file is not in the .txt format")
+
     root.debug("sql_ids.txt is updated")
 
 
@@ -87,8 +112,5 @@ path_sql_id = config['SQL_ID_DATA_DIR']
 # --------------------------------
 #               Run
 # --------------------------------
-
-days_interval = 7
-time_to_run = "03:00"
-root.info('start updating sql_id.txt every ' + str(days_interval) + ' days at time ' + time_to_run)
-save_sql_id_list( path_log, path_sql_id)
+root.info('start updating sql_id.txt')
+save_sql_id_list(path_log, path_sql_id)
