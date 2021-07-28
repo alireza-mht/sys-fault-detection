@@ -132,38 +132,72 @@ def get_preprocessed_data(path_file, days=None):
     return sql_store_dict
 
 
-def get_info_for_sql_id(path_file, days, sql_id):
+def get_info_for_sql_id(path_dir, days, sql_id):
     now = datetime.datetime.now()
     start_time = now - datetime.timedelta(days=days)
     start_time = datetime.datetime(year=start_time.year, month=start_time.month, day=1)
-    # try:
-    file = open(path_file)
 
-    lines = file.read().splitlines()
-    data = []
+    current_dir = os.getcwd()
+    # Change the directory
+    os.chdir(path_dir)
+    if len(os.listdir()) == 0:
+        logging.warning("There is not any log file to be processed")
+
+    code_status = '200'
     date = []
     ip_address = []
-    for line in reversed(lines):
-        data_line = line.split()
-        line_date = data_line[3].replace('[', '').replace(':', ' ', 1)
-        line_date = datetime.datetime.strptime(line_date, '%d/%b/%Y %H:%M:%S')
+    # iterate through all file
+    for log_file in reversed(os.listdir()):
+        # Check whether file is in text format or not
+        if log_file.endswith(".txt"):
+            file_path = path_dir + os.sep + log_file
+            file = open(file_path)
+            lines = file.read().splitlines()
 
-        # break if the line_date exceeded the request date
-        if line_date < start_time:
-            break
+            # we start iterating from end to be able to break the for loop. Better performance
+            for line in reversed(lines):
+                # some data do not have sql_id
+                if "sqlstore_id" in line:
+                    data_line = line.split()
+                    if data_line[1] != '-':
+                        date_index = 1
+                    else:
+                        date_index = 3
 
-        # some data do not have sql_id
-        if "sqlstore_id" in line:
-            sql_id_log = data_line[6].split("sqlstore_id=")[1].split("&")[0]
+                    line_date = data_line[date_index].replace('[', '').replace(':', ' ', 1)
+                    line_date = datetime.datetime.strptime(line_date, '%d/%b/%Y %H:%M:%S')
+                    # break if the line_date exceeded the request date
+                    if line_date < start_time:
+                        file.close()
+                        os.chdir(current_dir)
+                        dictionary = {
+                            "date": date,
+                            "sql_id": sql_id,
+                            "ip_address": ip_address
+                        }
+                        return dictionary
 
-            # some data do not have response time and some of them have error
-            if data_line[9].isdigit() and sql_id_log != 'null' and sql_id_log == sql_id:
-                date.append(line_date)
-                ip_address.append(data_line[0])
-                # data.append(
-                #     [line_date,
-                #      np.int64(data_line[6].split("sqlstore_id=")[1].split("&")[0]),
-                #      data_line[0]])
+                    if len(data_line) == 10:
+                        status_index = 8
+                        sql_id_index = 6
+                        time_index = 9
+                    else:
+                        status_index = 7
+                        sql_id_index = 5
+                        time_index = 8
+
+                    if data_line[status_index] == code_status:
+                        sql_id_log = data_line[sql_id_index].split("sqlstore_id=")[1].split("&")[0]
+                        # some data do not have response time and some of them have error
+                        if data_line[time_index].isdigit() and sql_id != 'null' and sql_id_log == sql_id:
+                            date.append(line_date)
+                            ip_address.append(data_line[0])
+
+            file.close()
+        else:
+            logging.warning("Log file is not in .txt format")
+
+    os.chdir(current_dir)
     dictionary = {
         "date": date,
         "sql_id": sql_id,
@@ -210,33 +244,26 @@ def limit_sql_id(sql_ids, time):
 
 
 def get_number_of_requests_per_month(dates):
-    # dates.append(time_now)
     sample_x_pd = pd.to_datetime(dates)
     df = pd.DataFrame(sample_x_pd, columns=['Date'])
     df['Count'] = np.ones(len(dates))
     freq_rate = '1MS'
     grouped = df.groupby(pd.Grouper(key='Date', freq=freq_rate)).sum()
     grouped_reset = grouped.reset_index()
-    Row_list = []
-
+    grouped_reset["Date"] = grouped_reset["Date"].dt.strftime("%Y-%m-%d")
+    # Row_list = []
+    month_req_dict = {}
     # Iterate over each row
     for index, rows in grouped_reset.iterrows():
-        # Create list for the current row
-        my_list = [rows.Date, rows.Count]
+        month_req_dict[rows.Date] = rows.Count
 
-        # append the list to the final list
-        Row_list.append(my_list)
-    return Row_list
+    return month_req_dict
 
 
 # [grouped.index.values.astype('M8[s]').astype('O'), grouped['Count'].values]
 
 
 def get_number_of_ip(dates, ip_addresses):
-    time_now = datetime.datetime.now()
-    # dates.append(time_now)
-    # ip_addresses.append(" ")
-
     sample_x_pd = pd.to_datetime(dates)
 
     df = pd.DataFrame(sample_x_pd, columns=['Date'])
@@ -245,18 +272,15 @@ def get_number_of_ip(dates, ip_addresses):
     df['Count'] = np.concatenate((np.ones(len(dates) - 1), np.zeros(1)), axis=0)
     freq_rate = '1MS'
     grouped_by_date_ip = df.groupby([pd.Grouper(key='Date', freq=freq_rate), "Ip"]).sum()
-    df = grouped_by_date_ip.reset_index()
-    # df_date_ip = pd.DataFrame(grouped_by_date_ip)
-    # grouped_by_date = reset.groupby(['Date'])
-    # print(grouped_by_date.head())
-    Row_list = []
+    grouped_reset = grouped_by_date_ip.reset_index()
+    grouped_reset["Date"] = grouped_reset["Date"].dt.strftime("%Y-%m-%d")
 
+    ip_req_dict = {}
     # Iterate over each row
-    for index, rows in df.iterrows():
-        # Create list for the current row
-        my_list = [rows.Date, rows.Ip, rows.Count]
+    for index, rows in grouped_reset.iterrows():
+        if rows.Date in ip_req_dict.keys():
+            ip_req_dict[rows.Date].append({rows.Ip: rows.Count})
+        else:
+            ip_req_dict[rows.Date] = [{rows.Ip: rows.Count}]
 
-        # append the list to the final list
-        Row_list.append(my_list)
-
-    return Row_list
+    return ip_req_dict

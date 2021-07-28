@@ -87,8 +87,9 @@ def plot_sys_fault():
     days_num = request.args.get('days_num', None)
     path_log = app.config['LOG_DATA_DIR']
     path_fault = app.config['FAULT_DATA_DIR']
-    get_info(sql_id, path_log)
+    # get_info(sql_id, path_log)
     # check if we have enough data
+
     try:
         sql_stores_dict = preprocessing.get_preprocessed_data(days=int(days_num), path_file=path_log)
     except FileNotFoundError as e:
@@ -157,11 +158,20 @@ def creat_fig(sql_stores_dict, sql_id, path_fault):
     return system_fault.plot_sys_fault(moved_average, sql_id, sys_fault, time_interval=time_interval)
 
 
-def get_info(sql_id, path_log):
+@app.route('/get_info')
+def get_info():
+    sql_id = request.args.get('sql_id', None)
+    path_log = app.config['LOG_DATA_DIR']
     sql_stores = preprocessing.get_info_for_sql_id(path_log, 365, sql_id)
-    last_date = sql_stores['date'][-1]
+    last_date = sql_stores['date'][0]
     number_of_requests = preprocessing.get_number_of_requests_per_month(sql_stores['date'])
     ip_address = preprocessing.get_number_of_ip(sql_stores['date'], sql_stores['ip_address'])
+    object_dict = {"Last_date": last_date.strftime("%Y-%m-%d %H:%M:%S"),
+                   "ip_address": ip_address,
+                   "number_of_requests": number_of_requests}
+    graph_json = json.dumps(object_dict)
+    return Response(graph_json, status=200, mimetype='application/json')
+
 
 @app.errorhandler(Exception)
 def handle_exception(e):
