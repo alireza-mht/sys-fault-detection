@@ -26,6 +26,19 @@
         <div id="data" class="chart">
             <div id="chart"></div>
         </div>
+        <div id="div-table" style="display:none;">
+        <table class="styled-table" id="table">
+            <thead id = "table-thead">
+            <tr>
+                <th>month</th>
+                <th>number of req</th>
+                <th>ip address</th>
+                <th>req per ip</th>
+            </tr>
+            </thead>
+
+        </table>
+    </div>
     </div>
 
 </div>
@@ -35,88 +48,7 @@
 
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script type="text/javascript">
-
-    function loadingData() {
-        let theUrl = "http://127.0.0.1:5000/get_sql_ids"
-        let xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function () {
-            if (xmlHttp.readyState === 4) {
-                if (xmlHttp.status === 200) {
-
-                    let elements = JSON.parse(xmlHttp.responseText);
-                    let select = document.querySelector("#myid")
-                    for (let elt of elements) {
-                        let option = document.createElement("option");
-                        option.text = elt;
-                        option.value = elt;
-                        select.appendChild(option);
-                    }
-                    document.getElementById("loader").style.display = "none"
-                    document.getElementById("page").style.display = "block"
-                }else{
-                    document.getElementById("loader").style.display = "none"
-                    document.getElementById("page").style.display = "block"
-                    showError("There is an internal server error \n " + xmlHttp.responseText)
-                }
-            }
-        };
-        xmlHttp.open("GET", theUrl);
-        xmlHttp.send();
-    }
-
-
-    function show() {
-        document.getElementById("loader-graph").style.display = "block"
-
-        let days = document.getElementById("fname").value
-        let e = document.getElementById("myid")
-        let sql_id = e.value
-
-        //remove the error message
-        if (document.getElementById("error") != null)
-            document.getElementById("error").remove()
-
-
-        //remove previous plot
-        document.getElementById("chart").remove()
-        let child = document.createElement("div");
-        child.id = "chart";
-        document.getElementById("data").append(child)
-
-        if (days === "" || days === "0") {
-            showError("please enter valid days number")
-        } else {
-            let theUrl = "http://127.0.0.1:5000/plot?sql_id=" + sql_id + "&days_num=" + days
-            let xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange = function () {
-                if(xmlHttp.readyState === 4) {
-                    if (xmlHttp.status === 200) {
-
-                        document.getElementById("loader-graph").style.display = "none"
-                        let graph = JSON.parse(xmlHttp.responseText);
-                        Plotly.plot('chart', graph, {});
-
-                    } else if (xmlHttp.status === 400) {
-                        showError(xmlHttp.responseText)
-                    }else{
-                        showError("There is an internal server error \n " + xmlHttp.responseText)
-                    }
-                }
-            };
-            xmlHttp.open("GET", theUrl);
-            xmlHttp.send();
-        }
-        return false;
-    }
-
-    function showError(s) {
-        document.getElementById("loader-graph").style.display = "none"
-        let child = document.createElement("div");
-        child.id = "error";
-        child.innerHTML = "<p>" + s + "</p>"
-        document.getElementById("graph").append(child)
-    }
+<script src="../static/script.js" type="text/javascript">
 
 </script>
 <script>
