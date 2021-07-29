@@ -87,7 +87,6 @@ def plot_sys_fault():
     days_num = request.args.get('days_num', None)
     path_log = app.config['LOG_DATA_DIR']
     path_fault = app.config['FAULT_DATA_DIR']
-    # get_info(sql_id, path_log)
     # check if we have enough data
 
     try:
@@ -166,7 +165,7 @@ def get_info():
     last_date = sql_stores['date'][0]
     number_of_requests = preprocessing.get_number_of_requests_per_month(sql_stores['date'])
     ip_address = preprocessing.get_number_of_ip(sql_stores['date'], sql_stores['ip_address'])
-    object_dict = {"Last_date": last_date.strftime("%Y-%m-%d %H:%M:%S"),
+    object_dict = {"last_date": last_date.strftime("%Y-%m-%d %H:%M:%S"),
                    "ip_address": ip_address,
                    "number_of_requests": number_of_requests}
     graph_json = json.dumps(object_dict)

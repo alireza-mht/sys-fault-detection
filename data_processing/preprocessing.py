@@ -11,16 +11,15 @@ def read_date(path_dir, days=None):
         start_time = now - datetime.timedelta(days=days)
     else:
         start_time = datetime.datetime.min
-    current_dir = os.getcwd()
-    # Change the directory
-    os.chdir(path_dir)
-    if len(os.listdir()) == 0:
+
+    list_dir = os.listdir(path_dir)
+    if len(list_dir) == 0:
         logging.warning("There is not any log file to be processed")
 
     code_status = '200'
     data = []
     # iterate through all file
-    for log_file in reversed(os.listdir()):
+    for log_file in reversed(list_dir):
         # Check whether file is in text format or not
         if log_file.endswith(".txt"):
             file_path = path_dir + os.sep + log_file
@@ -42,7 +41,6 @@ def read_date(path_dir, days=None):
                     # break if the line_date exceeded the request date
                     if line_date < start_time:
                         file.close()
-                        os.chdir(current_dir)
                         # return from latest time up until now
                         return reversed(data)
 
@@ -68,7 +66,6 @@ def read_date(path_dir, days=None):
         else:
             logging.warning("Log file is not in .txt format")
 
-    os.chdir(current_dir)
     # return from latest time up until now
     return reversed(data)
 
@@ -137,17 +134,15 @@ def get_info_for_sql_id(path_dir, days, sql_id):
     start_time = now - datetime.timedelta(days=days)
     start_time = datetime.datetime(year=start_time.year, month=start_time.month, day=1)
 
-    current_dir = os.getcwd()
-    # Change the directory
-    os.chdir(path_dir)
-    if len(os.listdir()) == 0:
+    list_dir = os.listdir(path_dir)
+    if len(list_dir) == 0:
         logging.warning("There is not any log file to be processed")
 
     code_status = '200'
     date = []
     ip_address = []
     # iterate through all file
-    for log_file in reversed(os.listdir()):
+    for log_file in reversed(list_dir):
         # Check whether file is in text format or not
         if log_file.endswith(".txt"):
             file_path = path_dir + os.sep + log_file
@@ -169,7 +164,6 @@ def get_info_for_sql_id(path_dir, days, sql_id):
                     # break if the line_date exceeded the request date
                     if line_date < start_time:
                         file.close()
-                        os.chdir(current_dir)
                         dictionary = {
                             "date": date,
                             "sql_id": sql_id,
@@ -197,7 +191,6 @@ def get_info_for_sql_id(path_dir, days, sql_id):
         else:
             logging.warning("Log file is not in .txt format")
 
-    os.chdir(current_dir)
     dictionary = {
         "date": date,
         "sql_id": sql_id,
@@ -269,7 +262,8 @@ def get_number_of_ip(dates, ip_addresses):
     df = pd.DataFrame(sample_x_pd, columns=['Date'])
     df.insert(1, 'Ip', ip_addresses)
 
-    df['Count'] = np.concatenate((np.ones(len(dates) - 1), np.zeros(1)), axis=0)
+    # df['Count'] = np.concatenate((np.ones(len(dates) - 1), np.zeros(1)), axis=0)
+    df['Count'] = np.ones(len(dates))
     freq_rate = '1MS'
     grouped_by_date_ip = df.groupby([pd.Grouper(key='Date', freq=freq_rate), "Ip"]).sum()
     grouped_reset = grouped_by_date_ip.reset_index()
