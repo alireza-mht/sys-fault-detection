@@ -4,6 +4,7 @@ import datetime
 import plotly.graph_objects as go
 import logging
 
+
 def group_average_by_minutes(samples, minutes, start_time, end_time):
     """ group the moving average of one specific sql_id based on the defined start time and end time
 
@@ -17,21 +18,20 @@ def group_average_by_minutes(samples, minutes, start_time, end_time):
     based_diff_start = (sample_x[0] - start_time).total_seconds()
     based_diff_end = (end_time - sample_x[-1]).total_seconds()
 
-    # reform the data size to be started from start time
+    # reform the data size to be started from start time if the difference is more than the 10 min intervals differences
     if based_diff_start > (minutes * 60):
         sample_x = np.insert(sample_x, 0,
                              start_time, axis=0)
         sample_y = np.insert(sample_y, 0, 0, axis=0)
 
     # reform the data size to be ended in end time
-    if based_diff_end > (minutes * 60):
-        sample_x = np.append(sample_x, end_time)
-        sample_y = np.append(sample_y, 0)
+    sample_x_updated = np.append(sample_x, end_time)
+    sample_y_updated = np.append(sample_y, 0)
 
     # we want to use groupby method of panda
-    sample_x_pd = pd.to_datetime(sample_x)
+    sample_x_pd = pd.to_datetime(sample_x_updated)
     df = pd.DataFrame(sample_x_pd, columns=['Date'])
-    df['latency'] = sample_y
+    df['latency'] = sample_y_updated
 
     # define the freq_rate for grouping the data (in sec)
     freq_rate = str(minutes * 60) + 'S'
@@ -66,7 +66,7 @@ def calculate_fault(grouped_by_minutes, acceptance_rate, min_valid_pair_interval
         number_of_valid_pair_interval = 0
 
         for dic in grouped_by_minutes:
-            # if we have a sql request on the interval we will count it
+            # if we have a sql request on the interval we will count it. It should be non zero in the interval
             if grouped_by_minutes[dic][1][i] != 0 and grouped_by_minutes[dic][1][i + 1] != 0:
                 number_of_valid_pair_interval += 1
 
@@ -102,7 +102,8 @@ def group_by_minutes(sql_store_dict, time_interval):
                                                        microseconds=start_time.microsecond)
     end_time_round = end_time - datetime.timedelta(minutes=end_time.minute % time_interval,
                                                    seconds=end_time.second,
-                                                   microseconds=end_time.microsecond)
+                                                   microseconds=end_time.microsecond) + datetime.timedelta(
+        minutes=time_interval)
 
     # group all the data in all sql_ids based on the time_interval
     for dic in sql_store_dict:
