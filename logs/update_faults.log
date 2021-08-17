@@ -1,28 +1,255 @@
-[2021-07-19 12:37:04,373] INFO : Service update_faults Demarre
-[2021-07-19 12:37:04,374] INFO : Service update_faults Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
-[2021-07-19 12:37:04,374] INFO : Service update_faults Repertoire des journaux: logs
-[2021-07-19 12:37:04,374] INFO : start updating faults.txt every 2 days at time 03:00
-[2021-07-19 12:38:10,862] DEBUG : Running job Job(interval=2, unit=minutes, do=update_faults, args=('C:/Users/DM3522/Desktop/access.log', 'resources/faults.txt', 10, 0.9, 10), kwargs={})
-[2021-07-19 12:38:10,862] DEBUG : start updating
-[2021-07-19 12:38:10,863] DEBUG : check database validation
-[2021-07-19 12:38:10,865] INFO : database is valid. start finding the faults in the new added data!
-[2021-07-19 12:38:10,873] DEBUG : preprocessing data started
-[2021-07-19 12:38:56,855] DEBUG : grouping data by minutes started
-[2021-07-19 12:38:58,906] DEBUG : calculating the faults
-[2021-07-19 12:39:07,950] DEBUG : faults.txt is updated
-[2021-07-19 12:40:10,540] DEBUG : Running job Job(interval=2, unit=minutes, do=update_faults, args=('C:/Users/DM3522/Desktop/access.log', 'resources/faults.txt', 10, 0.9, 10), kwargs={})
-[2021-07-19 12:40:10,540] DEBUG : start updating
-[2021-07-19 12:40:10,540] DEBUG : check database validation
-[2021-07-19 12:40:10,541] INFO : database is valid. start finding the faults in the new added data!
-[2021-07-19 12:40:10,541] DEBUG : preprocessing data started
-[2021-07-19 12:40:15,792] WARNING : there is not any new data
-[2021-07-19 12:40:15,792] DEBUG : faults.txt is updated
-[2021-07-19 12:42:03,673] INFO : Service update_faults Demarre
-[2021-07-19 12:42:03,673] INFO : Service update_faults Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
-[2021-07-19 12:42:03,673] INFO : Service update_faults Repertoire des journaux: logs
-[2021-07-19 12:42:03,673] INFO : start updating faults.txt every 2 days at time 03:00
 
-[2021-07-19 15:31:20,940] INFO : Service update_faults Demarre
-[2021-07-19 15:31:20,940] INFO : Service update_faults Fichier de configuration: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
-[2021-07-19 15:31:20,940] INFO : Service update_faults Repertoire des journaux: logs
-[2021-07-19 15:31:20,940] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-19 19:32:08,696] INFO : Service update_faults started
+[2021-07-19 19:32:08,696] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 19:32:08,696] INFO : Service update_faults logs of reports: logs
+[2021-07-19 19:32:08,696] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-19 19:36:27,300] INFO : Service update_faults started
+[2021-07-19 19:36:27,300] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-19 19:36:27,300] INFO : Service update_faults logs of reports: logs
+[2021-07-19 19:36:27,300] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:51:02,192] INFO : Service update_faults started
+[2021-07-26 10:51:02,192] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:51:02,192] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:51:02,192] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:51:02,192] DEBUG : start updating
+[2021-07-26 10:51:02,192] DEBUG : check database validation
+[2021-07-26 10:51:02,192] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:51:02,208] DEBUG : preprocessing data started
+[2021-07-26 10:51:02,897] DEBUG : grouping data by minutes started
+[2021-07-26 10:51:03,220] DEBUG : calculating the faults
+[2021-07-26 10:52:46,486] INFO : Service update_faults started
+[2021-07-26 10:52:46,486] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:52:46,486] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:52:46,486] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:52:46,486] DEBUG : start updating
+[2021-07-26 10:52:46,486] DEBUG : check database validation
+[2021-07-26 10:52:46,486] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:52:46,486] DEBUG : preprocessing data started
+[2021-07-26 10:52:47,320] DEBUG : grouping data by minutes started
+[2021-07-26 10:52:47,667] DEBUG : calculating the faults
+[2021-07-26 10:53:03,227] INFO : Service update_faults started
+[2021-07-26 10:53:03,227] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:53:03,227] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:53:03,227] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:53:03,227] DEBUG : start updating
+[2021-07-26 10:53:03,227] DEBUG : check database validation
+[2021-07-26 10:53:03,227] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:53:03,227] DEBUG : preprocessing data started
+[2021-07-26 10:53:14,521] INFO : Service update_faults started
+[2021-07-26 10:53:14,521] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:53:14,521] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:53:14,521] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:53:14,521] DEBUG : start updating
+[2021-07-26 10:53:14,521] DEBUG : check database validation
+[2021-07-26 10:53:14,521] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:53:14,521] DEBUG : preprocessing data started
+[2021-07-26 10:53:27,611] DEBUG : grouping data by minutes started
+[2021-07-26 10:53:28,354] DEBUG : calculating the faults
+[2021-07-26 10:54:23,054] INFO : Service update_faults started
+[2021-07-26 10:54:23,054] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:54:23,054] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:54:23,054] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:54:23,054] DEBUG : start updating
+[2021-07-26 10:54:25,947] DEBUG : check database validation
+[2021-07-26 10:54:35,927] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:54:35,927] DEBUG : preprocessing data started
+[2021-07-26 10:55:00,673] DEBUG : grouping data by minutes started
+[2021-07-26 10:55:09,896] DEBUG : calculating the faults
+[2021-07-26 10:57:32,809] INFO : Service update_faults started
+[2021-07-26 10:57:32,809] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:57:32,809] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:57:32,809] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:57:32,809] DEBUG : start updating
+[2021-07-26 10:57:32,809] DEBUG : check database validation
+[2021-07-26 10:57:32,809] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 10:57:32,825] DEBUG : preprocessing data started
+[2021-07-26 10:57:50,128] DEBUG : grouping data by minutes started
+[2021-07-26 10:57:51,378] DEBUG : calculating the faults
+[2021-07-26 10:58:23,282] INFO : Service update_faults started
+[2021-07-26 10:58:23,282] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:58:23,282] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:58:23,282] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:58:23,282] DEBUG : start updating
+[2021-07-26 10:58:23,282] DEBUG : check database validation
+[2021-07-26 10:58:23,282] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:58:23,297] DEBUG : preprocessing data started
+[2021-07-26 10:58:24,107] WARNING : there is not any new data
+[2021-07-26 10:58:24,107] DEBUG : faults.txt is updated
+[2021-07-26 10:58:33,829] INFO : Service update_faults started
+[2021-07-26 10:58:33,829] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:58:33,829] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:58:33,829] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:58:33,829] DEBUG : start updating
+[2021-07-26 10:58:33,829] DEBUG : check database validation
+[2021-07-26 10:58:33,830] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 10:58:33,830] DEBUG : preprocessing data started
+[2021-07-26 10:58:45,585] DEBUG : grouping data by minutes started
+[2021-07-26 10:58:46,429] DEBUG : calculating the faults
+[2021-07-26 10:59:07,229] INFO : Service update_faults started
+[2021-07-26 10:59:07,229] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:59:07,229] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:59:07,229] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:59:07,229] DEBUG : start updating
+[2021-07-26 10:59:07,229] DEBUG : check database validation
+[2021-07-26 10:59:07,229] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:59:07,229] DEBUG : preprocessing data started
+[2021-07-26 10:59:07,880] WARNING : there is not any new data
+[2021-07-26 10:59:07,880] DEBUG : faults.txt is updated
+[2021-07-26 10:59:23,782] INFO : Service update_faults started
+[2021-07-26 10:59:23,782] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:59:23,782] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:59:23,782] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:59:23,782] DEBUG : start updating
+[2021-07-26 10:59:23,782] DEBUG : check database validation
+[2021-07-26 10:59:23,782] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:59:23,782] DEBUG : preprocessing data started
+[2021-07-26 10:59:35,353] DEBUG : grouping data by minutes started
+[2021-07-26 10:59:36,186] DEBUG : calculating the faults
+[2021-07-26 10:59:49,954] INFO : Service update_faults started
+[2021-07-26 10:59:49,954] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 10:59:49,954] INFO : Service update_faults logs of reports: logs
+[2021-07-26 10:59:49,954] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 10:59:49,954] DEBUG : start updating
+[2021-07-26 10:59:49,954] DEBUG : check database validation
+[2021-07-26 10:59:49,954] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 10:59:49,954] DEBUG : preprocessing data started
+[2021-07-26 11:00:01,200] DEBUG : grouping data by minutes started
+[2021-07-26 11:00:02,058] DEBUG : calculating the faults
+[2021-07-26 11:00:13,178] INFO : Service update_faults started
+[2021-07-26 11:00:13,180] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:00:13,180] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:00:13,180] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:00:13,180] DEBUG : start updating
+[2021-07-26 11:00:13,180] DEBUG : check database validation
+[2021-07-26 11:00:13,180] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 11:00:13,180] DEBUG : preprocessing data started
+[2021-07-26 11:00:24,930] DEBUG : grouping data by minutes started
+[2021-07-26 11:00:25,931] DEBUG : calculating the faults
+[2021-07-26 11:02:18,155] INFO : Service update_faults started
+[2021-07-26 11:02:18,155] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:02:18,155] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:02:18,155] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:02:18,155] DEBUG : start updating
+[2021-07-26 11:02:21,850] DEBUG : check database validation
+[2021-07-26 11:02:22,808] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 11:02:22,810] DEBUG : preprocessing data started
+[2021-07-26 11:02:31,126] INFO : Service update_faults started
+[2021-07-26 11:02:31,126] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:02:31,126] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:02:31,126] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:02:31,126] DEBUG : start updating
+[2021-07-26 11:02:34,020] DEBUG : check database validation
+[2021-07-26 11:02:34,622] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 11:02:34,622] DEBUG : preprocessing data started
+[2021-07-26 11:04:26,995] DEBUG : grouping data by minutes started
+[2021-07-26 11:04:52,463] DEBUG : calculating the faults
+[2021-07-26 11:05:28,632] INFO : Service update_faults started
+[2021-07-26 11:05:28,632] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:05:28,632] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:05:28,632] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:05:28,632] DEBUG : start updating
+[2021-07-26 11:05:34,600] DEBUG : check database validation
+[2021-07-26 11:05:34,600] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 11:05:34,606] DEBUG : preprocessing data started
+[2021-07-26 11:06:03,961] INFO : Service update_faults started
+[2021-07-26 11:06:03,961] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:06:03,961] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:06:03,961] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:06:03,961] DEBUG : start updating
+[2021-07-26 11:06:03,961] DEBUG : check database validation
+[2021-07-26 11:06:03,961] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 11:06:03,961] DEBUG : preprocessing data started
+[2021-07-26 11:06:52,579] DEBUG : grouping data by minutes started
+[2021-07-26 11:06:53,984] DEBUG : calculating the faults
+[2021-07-26 11:14:11,234] INFO : Service update_faults started
+[2021-07-26 11:14:11,234] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:14:11,235] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:14:11,235] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:14:31,467] DEBUG : start updating
+[2021-07-26 11:14:31,467] DEBUG : check database validation
+[2021-07-26 11:14:45,430] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 11:14:48,973] DEBUG : preprocessing data started
+[2021-07-26 11:14:50,159] WARNING : there is not any new data
+[2021-07-26 11:14:50,159] DEBUG : faults.txt is updated
+[2021-07-26 11:15:11,476] INFO : Service update_faults started
+[2021-07-26 11:15:11,476] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:15:11,476] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:15:11,476] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:15:15,281] DEBUG : start updating
+[2021-07-26 11:15:15,281] DEBUG : check database validation
+[2021-07-26 11:15:16,189] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 11:15:17,379] DEBUG : preprocessing data started
+[2021-07-26 11:16:56,674] INFO : Service update_faults started
+[2021-07-26 11:16:56,675] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:16:56,675] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:16:56,675] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:16:59,988] DEBUG : start updating
+[2021-07-26 11:16:59,988] DEBUG : check database validation
+[2021-07-26 11:17:00,506] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 11:17:01,151] DEBUG : preprocessing data started
+[2021-07-26 11:19:04,627] INFO : Service update_faults started
+[2021-07-26 11:19:04,627] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:19:04,627] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:19:04,627] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:19:04,628] DEBUG : start updating
+[2021-07-26 11:19:04,628] DEBUG : check database validation
+[2021-07-26 11:19:04,628] INFO : database is valid. start finding the faults in the new added data!
+[2021-07-26 11:19:04,630] DEBUG : preprocessing data started
+[2021-07-26 11:19:18,303] DEBUG : grouping data by minutes started
+[2021-07-26 11:19:19,298] DEBUG : calculating the faults
+[2021-07-26 11:19:22,584] DEBUG : faults.txt is updated
+[2021-07-26 11:20:24,464] INFO : Service update_faults started
+[2021-07-26 11:20:24,464] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:20:24,465] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:20:24,465] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:20:24,465] DEBUG : start updating
+[2021-07-26 11:20:24,465] DEBUG : check database validation
+[2021-07-26 11:20:24,465] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 11:20:24,466] DEBUG : preprocessing data started
+[2021-07-26 11:20:39,246] DEBUG : grouping data by minutes started
+[2021-07-26 11:20:40,927] DEBUG : calculating the faults
+[2021-07-26 11:20:45,272] DEBUG : faults.txt is updated
+[2021-07-26 11:21:22,934] INFO : Service update_faults started
+[2021-07-26 11:21:22,935] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 11:21:22,935] INFO : Service update_faults logs of reports: logs
+[2021-07-26 11:21:22,935] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 11:21:22,935] DEBUG : start updating
+[2021-07-26 11:21:22,935] DEBUG : check database validation
+[2021-07-26 11:21:22,935] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 11:21:22,936] DEBUG : preprocessing data started
+[2021-07-26 11:21:36,934] DEBUG : grouping data by minutes started
+[2021-07-26 11:21:37,987] DEBUG : calculating the faults
+[2021-07-26 11:21:42,090] DEBUG : faults.txt is updated
+[2021-07-26 12:34:05,345] INFO : Service update_faults started
+[2021-07-26 12:34:05,346] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 12:34:05,346] INFO : Service update_faults logs of reports: logs
+[2021-07-26 12:34:05,346] INFO : start updating faults.txt every 2 days at time 03:00
+[2021-07-26 12:34:05,346] DEBUG : start updating
+[2021-07-26 12:34:05,347] DEBUG : check database validation
+[2021-07-26 12:34:05,347] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 12:34:05,348] DEBUG : preprocessing data started
+[2021-07-26 12:34:18,376] DEBUG : grouping data by minutes started
+[2021-07-26 12:34:19,754] DEBUG : calculating the faults
+[2021-07-26 12:34:23,460] DEBUG : faults.txt is updated
+[2021-07-26 17:22:30,670] INFO : Service update_faults started
+[2021-07-26 17:22:30,670] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-26 17:22:30,670] INFO : Service update_faults logs of reports: logs
+[2021-07-26 17:22:30,670] INFO : start updating faults.txt
+[2021-07-26 17:22:30,670] DEBUG : start updating
+[2021-07-26 17:22:30,670] DEBUG : check database validation
+[2021-07-26 17:22:30,670] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-26 17:22:30,670] DEBUG : preprocessing data started
+[2021-07-26 17:22:43,931] DEBUG : grouping data by minutes started
+[2021-07-26 17:22:45,189] DEBUG : calculating the faults
+[2021-07-26 17:22:49,281] DEBUG : faults.txt is updated
+[2021-07-29 02:25:46,051] INFO : Service update_faults started
+[2021-07-29 02:25:46,052] INFO : Service update_faults configuration file: C:\Users\DM3522\Desktop\sys-fault-detection\config\config.json
+[2021-07-29 02:25:46,052] INFO : Service update_faults logs of reports: logs
+[2021-07-29 02:25:46,052] INFO : start updating faults.txt
+[2021-07-29 02:25:46,052] DEBUG : start updating
+[2021-07-29 02:25:46,052] DEBUG : check database validation
+[2021-07-29 02:25:46,053] WARNING : fault.txt is not valid. start calculating the faults with new configuration!
+[2021-07-29 02:25:46,054] DEBUG : preprocessing data started
+[2021-07-29 02:25:57,950] DEBUG : grouping data by minutes started
+[2021-07-29 02:25:58,995] DEBUG : calculating the faults
+[2021-07-29 02:26:03,425] DEBUG : faults.txt is updated

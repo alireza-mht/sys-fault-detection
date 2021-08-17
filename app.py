@@ -83,6 +83,7 @@ def get_sql_id_list():
 
 @app.route('/plot', methods=['GET'])
 def plot_sys_fault():
+    root.debug(" ========== plot started ========")
     sql_id = request.args.get('sql_id', None)
     days_num = request.args.get('days_num', None)
     path_log = app.config['LOG_DATA_DIR']
@@ -103,6 +104,7 @@ def plot_sys_fault():
     fig = creat_fig(sql_stores_dict, int(sql_id), path_fault)
     graph_json = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     root.info("plotting is finished")
+    root.debug(" ========== plot finished ========")
     return Response(graph_json, status=200, mimetype='application/json')
 
 
@@ -159,6 +161,7 @@ def creat_fig(sql_stores_dict, sql_id, path_fault):
 
 @app.route('/get_info')
 def get_info():
+    root.debug(" ========== get info started ========")
     sql_id = request.args.get('sql_id', None)
     path_log = app.config['LOG_DATA_DIR']
     sql_stores = preprocessing.get_info_for_sql_id(path_log, 365, sql_id)
@@ -169,6 +172,7 @@ def get_info():
                    "ip_address": ip_address,
                    "number_of_requests": number_of_requests}
     graph_json = json.dumps(object_dict)
+    root.debug(" ========== get info finished ========")
     return Response(graph_json, status=200, mimetype='application/json')
 
 

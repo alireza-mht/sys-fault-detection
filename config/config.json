@@ -1,6 +1,6 @@
 {
   "DEBUG": true,
-  "LOG_DATA_DIR": "C:/Users/DM3522/Desktop/access.log",
+  "LOG_DATA_DIR": "C:/Users/DM3522/Desktop/logB",
   "FAULT_DATA_DIR": "resources/faults.txt",
   "SQL_ID_DATA_DIR":"resources/sql_ids.txt",
   "TIME_INTERVAL" : 10,
